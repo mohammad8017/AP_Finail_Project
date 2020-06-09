@@ -1,0 +1,15 @@
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.exe.config
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.exe
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.pdb
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csprojAssemblyReference.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\MainWindow.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\App.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_MarkupCompile.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_MarkupCompile.lref
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\MainWindow.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.g.resources
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.Properties.Resources.resources
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.GenerateResource.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.exe
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.pdb
