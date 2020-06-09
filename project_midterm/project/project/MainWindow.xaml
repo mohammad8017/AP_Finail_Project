@@ -11,42 +11,42 @@
             <TabItem x:Name="tab1" Header="tab 1">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="63*"/>
-                        <ColumnDefinition Width="475*"/>
+                        <ColumnDefinition Width="59*"/>
+                        <ColumnDefinition Width="479*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <TextBlock HorizontalAlignment="Left" Height="65" Margin="273.098,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="192" Background="#FF637DC5" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Grid.Column="1"/>
-                    <Button x:Name="btn1" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="10,104,0,0" Height="53" FontSize="16" FontWeight="Bold" Background="#FF637DC5" Click="Btn1_Click" Grid.ColumnSpan="2"/>
-                    <Button x:Name="btn2" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="158.098,104,0,0" Height="53" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn2_Click" Grid.Column="1"/>
-                    <Button x:Name="btn3" Content="R" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="360.098,104,0,0" Height="53" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn3_Click" Grid.Column="1"/>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,264,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="316" Background="#FF637DC5" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Grid.ColumnSpan="2"/>
-                    <Button x:Name="btn4" Content="New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="518" Margin="10,184,0,0" Height="53" FontSize="16" FontWeight="Bold" Background="#FF637DC5" Click="Btn4_Click" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk1" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="10,319,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk2" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="10,358,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk3" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="10,397,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk4" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="158.098,319,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <CheckBox x:Name="chk5" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="158.098,358,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <CheckBox x:Name="chk6" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="158.098,397,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <ComboBox x:Name="cmb1" HorizontalAlignment="Left" Height="19" Margin="294.098,319,0,0" VerticalAlignment="Top" Width="171" FontWeight="Bold" Foreground="#FFCB3838" Text="-- Select Team --" Grid.Column="1" >
+                    <TextBlock HorizontalAlignment="Left" Height="65" Margin="272.8,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="192" Background="#FF637DC5" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Grid.Column="1"/>
+                    <Button x:Name="btn1" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="7,104,0,0" Height="53" FontSize="16" FontWeight="Bold" Background="#FF637DC5" Click="Btn1_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btn2" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="157.8,104,0,0" Height="53" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn2_Click" Grid.Column="1"/>
+                    <Button x:Name="btn3" Content="R" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="359.8,104,0,0" Height="53" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn3_Click" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="7,264,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="316" Background="#FF637DC5" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btn4" Content="ثبت نام" HorizontalAlignment="Left" VerticalAlignment="Top" Width="518" Margin="7,184,0,0" Height="53" FontSize="16" FontWeight="Bold" Background="#FF637DC5" Click="Btn4_Click" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="chk1" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="7,319,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="chk2" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="7,358,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="chk3" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="7,397,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="chk4" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="157.8,319,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
+                    <CheckBox x:Name="chk5" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="157.8,358,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
+                    <CheckBox x:Name="chk6" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="157.8,397,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
+                    <ComboBox x:Name="cmb1" HorizontalAlignment="Left" Height="19" Margin="293.8,319,0,0" VerticalAlignment="Top" Width="171" FontWeight="Bold" Foreground="#FFCB3838" Text="-- Select Team --" Grid.Column="1" >
                         <ComboBoxItem Content="Tehran" />
                         <ComboBoxItem Content="mash'had" />
                         <ComboBoxItem Content="Esfehan" />
                         <ComboBoxItem Content="Tabriz" />
                     </ComboBox>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,444,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="316"  FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Background="#FF637DC5" Grid.ColumnSpan="2"/>
-                    <StackPanel HorizontalAlignment="Left" Height="94" Margin="10,491,0,0" VerticalAlignment="Top" Width="518" Background="#FF637DC5" Grid.ColumnSpan="2">
+                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="7,444,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="316"  FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Background="#FF637DC5" Grid.ColumnSpan="2"/>
+                    <StackPanel HorizontalAlignment="Left" Height="94" Margin="7,491,0,0" VerticalAlignment="Top" Width="518" Background="#FF637DC5" Grid.ColumnSpan="2">
                         <TextBox Margin="10,10,9.4,10" TextWrapping="Wrap" Foreground="Black" Height="76" RenderTransformOrigin="0.505,0.568" FontSize="16" FontWeight="Bold" Background="#FF637DC5" BorderBrush="#FF637DC5" AcceptsReturn="True">
 
                         </TextBox>
                     </StackPanel>
-                    <Button x:Name="btn5" Content="Next Page" HorizontalAlignment="Left" Height="42" Margin="252.098,590,0,0" VerticalAlignment="Top" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn5_Click" BorderBrush="{x:Null}" Grid.Column="1"/>
-                    <Button x:Name="btn11" Content="Date :" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn11_Click" ToolTip="Click to show date" Grid.ColumnSpan="2"/>
-                    <Button x:Name="btn22" Content="Time :" HorizontalAlignment="Left" Height="27" Margin="10,48,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn22_Click" ToolTip="Click to show date" Grid.ColumnSpan="2"/>
-                    <TextBlock x:Name="txt22" HorizontalAlignment="Left" Height="27" Margin="29.098,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <TextBlock x:Name="txt11" HorizontalAlignment="Left" Height="27" Margin="29.098,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <Button x:Name="btn8" Content="EXIT" HorizontalAlignment="Left" Height="42" Margin="82.098,0,0,10.4" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn8_Click" BorderBrush="{x:Null}" Grid.Column="1"/>
+                    <Button x:Name="btn5" Content="Next Page" HorizontalAlignment="Left" Height="42" Margin="251.8,590,0,0" VerticalAlignment="Top" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn5_Click" BorderBrush="{x:Null}" Grid.Column="1"/>
+                    <Button x:Name="btn11" Content="Date :" HorizontalAlignment="Left" Height="27" Margin="7,10,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn11_Click" ToolTip="Click to show date" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btn22" Content="Time :" HorizontalAlignment="Left" Height="27" Margin="7,48,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn22_Click" ToolTip="Click to show date" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="txt22" HorizontalAlignment="Left" Height="27" Margin="28.8,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FFCB3838" Grid.Column="1"/>
+                    <TextBlock x:Name="txt11" HorizontalAlignment="Left" Height="27" Margin="28.8,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FFCB3838" Grid.Column="1"/>
+                    <Button x:Name="btn8" Content="EXIT" HorizontalAlignment="Left" Height="42" Margin="81.8,0,0,10.4" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn8_Click" BorderBrush="{x:Null}" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab2" Header="tab 2">
@@ -66,7 +66,6 @@
                         <TextBox Margin="10,10,9.8,10" TextWrapping="Wrap" Foreground="#FFA22323" Height="93" RenderTransformOrigin="0.505,0.568" FontSize="16" FontWeight="Bold" Background="#FF637DC5" BorderBrush="#FF637DC5" AcceptsReturn="True"/>
                     </StackPanel>
                     <Button x:Name="btn6" Content="Previous Page" HorizontalAlignment="Left" Height="42" Margin="315,0,0,10.4" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn6_Click" BorderBrush="{x:Null}"/>
-                    <Image x:Name="img1" HorizontalAlignment="Left" Height="148" Margin="145,418,0,0" VerticalAlignment="Top" Width="295" Source="image/4.png"/>
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run Text="Gender :"/></TextBlock>
                     <RadioButton x:Name="rad1" Content="Male" HorizontalAlignment="Left" Height="27" Margin="176,369,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="#FFCB1D1D"/>
                     <RadioButton x:Name="rad2" Content="Female" HorizontalAlignment="Left" Height="27" Margin="317,369,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="#FFCB1D1D"/>

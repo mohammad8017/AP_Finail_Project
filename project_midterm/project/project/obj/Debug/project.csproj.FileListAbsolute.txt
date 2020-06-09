@@ -13,3 +13,5 @@ F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.exe
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.pdb
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.baml

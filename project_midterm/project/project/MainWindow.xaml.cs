@@ -47,7 +47,9 @@ namespace project
 
         private void Btn4_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("");
+            //MessageBox.Show("");
+            Signup_window sign_up = new Signup_window();
+            sign_up.Show();
         }
 
 
