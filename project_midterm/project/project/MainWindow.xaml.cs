@@ -20,19 +20,35 @@ namespace project
     /// </summary>
     public partial class MainWindow : Window
     {
+        //public List<Customer> customers = new List<Customer>();
         public MainWindow()
         {
             InitializeComponent();
 
-
             DateTime d;
             d = DateTime.Now;
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
+
+            //Signup_window window = new Signup_window();
+            //window.CreateObj();
+            //customers.Add(new Customer(window.name_text.Text, window.family_text.Text, double.Parse(window.phone_num_text.Text), window.email_text.Text, double.Parse(window.phone_num_text.Text), window.pass_text.Text));
+            
         }
 
         private void Btn1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("");
+            //MessageBox.Show($"{Signup_window.customer.Count()}");
+            bool check = false;
+            for (int i = 0; i < Signup_window.customer.Count; i++)
+            {
+                if (emailText.Text.Equals(Signup_window.customer[i].Email) && passText.Text.Equals(Signup_window.customer[i].Pass))
+                    check = true;
+            }
+            if (check)
+                MessageBox.Show("شما وارد حساب خود شدید");
+            else
+                MessageBox.Show("کلمه عبور یا ایمیل نادرست است");
+
         }
 
         private void Btn2_Click(object sender, RoutedEventArgs e)
@@ -50,6 +66,7 @@ namespace project
             //MessageBox.Show("");
             Signup_window sign_up = new Signup_window();
             sign_up.Show();
+            
         }
 
 
@@ -94,6 +111,7 @@ namespace project
         private void Btn8_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            
         }
     }
 }
