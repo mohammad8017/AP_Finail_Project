@@ -29,7 +29,7 @@ namespace project
         }
         public void CreateObj(/*ref List<Customer> customers*/)
         {
-            customer.Add(new Customer(name_text.Text, family_text.Text, double.Parse(phone_num_text.Text), email_text.Text, double.Parse(code_text.Text), pass_text.Text));
+            customer.Add(new Customer(name_text.Text, family_text.Text, double.Parse(phone_num_text.Text), email_text.Text, code_text.Text, pass_text.Text));
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

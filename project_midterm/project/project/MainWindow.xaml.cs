@@ -20,7 +20,9 @@ namespace project
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool signIn = false;
         //public List<Customer> customers = new List<Customer>();
+        public Customer Hold = new Customer();
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +44,17 @@ namespace project
             for (int i = 0; i < Signup_window.customer.Count; i++)
             {
                 if (emailText.Text.Equals(Signup_window.customer[i].Email) && passText.Text.Equals(Signup_window.customer[i].Pass))
+                {
                     check = true;
+                    signIn = true;
+                    //Hold = Signup_window.customer[i];
+                    Hold.Name = Signup_window.customer[i].Name;
+                    Hold.Family = Signup_window.customer[i].Family;
+                    Hold.PhoneNum = Signup_window.customer[i].PhoneNum;
+                    Hold.NationalCode = Signup_window.customer[i].NationalCode;
+                    Hold.Email = Signup_window.customer[i].Email;
+                    Hold.Pass = Signup_window.customer[i].Pass;
+                }  
             }
             if (check)
                 MessageBox.Show("شما وارد حساب خود شدید");
@@ -72,7 +84,10 @@ namespace project
 
         private void Btn5_Click(object sender, RoutedEventArgs e)
         {
-            tabControl.SelectedItem = tab2;
+            if (signIn)
+                tabControl.SelectedItem = tab2;
+            else
+                MessageBox.Show("شما هنوز وارد حساب خود نشده اید");
         }
 
         private void Btn6_Click(object sender, RoutedEventArgs e)
@@ -112,6 +127,47 @@ namespace project
         {
             this.Close();
             
+        }
+
+ 
+        private void Name_change_Click(object sender, RoutedEventArgs e)
+        {
+            changeName change = new changeName();
+            change.Show();
+            change.change(ref Hold);
+        }
+
+        private void Family_change_Click(object sender, RoutedEventArgs e)
+        {
+            changeFamily change = new changeFamily();
+            change.Show();
+            change.change(ref Hold);
+        }
+
+        private void Phone_change_Click(object sender, RoutedEventArgs e)
+        {
+            changePhone change = new changePhone();
+            change.Show();
+            change.change(ref Hold);
+        }
+
+        private void Pass_change_Click(object sender, RoutedEventArgs e)
+        {
+            changePass change = new changePass();
+            change.Show();
+            change.change(ref Hold);
+        }
+
+        private void EmailText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            changeEmail change = new changeEmail();
+            change.Show();
+            change.change(ref Hold);
+        }
+
+        private void EmailTex_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -14,9 +14,10 @@ namespace project
         public string Family { set; get; }
         public double PhoneNum { set; get; }
         public string Email { set; get; }
-        public double NationalCode { set; get; }
+        public string NationalCode { set; get; }
         public string Pass { set; get; }
-        public Customer(string name, string family, double phoneNum, string email, double nationalCode, string pass)
+        public Customer() {; }
+        public Customer(string name, string family, double phoneNum, string email, string nationalCode, string pass)
         {
             this.Name = name;
             this.Family = family;

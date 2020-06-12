@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\App.xaml
-2617319977
+71790386849
 
-9-652778114
+14-1762312768
 13-1505183044
-MainWindow.xaml;Signup_window.xaml;
+changeEmail.xaml;changeFamily.xaml;changeName.xaml;changePass.xaml;changePhone.xaml;MainWindow.xaml;Signup_window.xaml;
 
-False
+True
 

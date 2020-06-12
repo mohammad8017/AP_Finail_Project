@@ -56,10 +56,45 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Boss.cs" />
+    <Compile Include="changeEmail.xaml.cs">
+      <DependentUpon>changeEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changeFamily.xaml.cs">
+      <DependentUpon>changeFamily.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changeName.xaml.cs">
+      <DependentUpon>changeName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changePass.xaml.cs">
+      <DependentUpon>changePass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changePhone.xaml.cs">
+      <DependentUpon>changePhone.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Signup_window.xaml.cs">
       <DependentUpon>Signup_window.xaml</DependentUpon>
     </Compile>
+    <Page Include="changeEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changeFamily.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changeName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changePass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changePhone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

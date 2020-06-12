@@ -15,3 +15,13 @@ F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.pdb
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.g.cs
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeName.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeName.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeFamily.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeFamily.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.baml
