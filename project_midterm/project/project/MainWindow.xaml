@@ -62,9 +62,9 @@
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="نام خانوادگی"/><Run Text=" "/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="رمز عبور"/></TextBlock>
                     <Button x:Name="btn6" Content="Previous Page" HorizontalAlignment="Left" Height="42" Margin="315,0,0,10.4" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn6_Click" BorderBrush="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="جنسیت"/></TextBlock>
-                    <RadioButton x:Name="rad1" Content="Male" HorizontalAlignment="Left" Height="27" Margin="176,282,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="#FFCB1D1D"/>
-                    <RadioButton x:Name="rad2" Content="Female" HorizontalAlignment="Left" Height="27" Margin="315,282,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="#FFCB1D1D"/>
+                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="جنسیت"/></TextBlock>
+                    <RadioButton x:Name="rad1" Content="Male" HorizontalAlignment="Left" Height="27" Margin="176,469,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="#FFCB1D1D"/>
+                    <RadioButton x:Name="rad2" Content="Female" HorizontalAlignment="Left" Height="27" Margin="315,469,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="#FFCB1D1D" RenderTransformOrigin="0.459,0.415"/>
                     <Label  Height="34" HorizontalAlignment="Left" Margin="62,16,0,0" x:Name="label1" VerticalAlignment="Top" Width="122" FontWeight="Bold" FontSize="14" Foreground="#FFCB3838" />
                     <TextBox HorizontalAlignment="Left" Height="34" Margin="10,18,0,0" TextWrapping="Wrap" Text="Time :" VerticalAlignment="Top" Width="107" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     <Button x:Name="btn7" Content="EXIT" HorizontalAlignment="Left" Height="42" Margin="145,0,0,10.4" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn7_Click" BorderBrush="{x:Null}"/>
@@ -72,6 +72,9 @@
                     <Button x:Name="family_change" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,143,0,0" VerticalAlignment="Top" Width="62" Click="Family_change_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
                     <Button x:Name="phone_change" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,188,0,0" VerticalAlignment="Top" Width="62" Click="Phone_change_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
                     <Button x:Name="pass_change" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,232,0,0" VerticalAlignment="Top" Width="62" Click="Pass_change_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="عکس پروفایل"/></TextBlock>
+                    <Button x:Name="upload_image" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,285,0,0" VerticalAlignment="Top" Width="62" Click="upload_image_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
+                    <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="117" Margin="66,324,0,0" VerticalAlignment="Top" Width="172" Stretch="Fill"/>
                 </Grid>
             </TabItem>
         </TabControl>
