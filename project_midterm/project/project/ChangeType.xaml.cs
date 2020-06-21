@@ -15,22 +15,23 @@ using System.Windows.Shapes;
 namespace project
 {
     /// <summary>
-    /// Interaction logic for changeName.xaml
+    /// Interaction logic for ChangeType.xaml
     /// </summary>
-    public partial class changeName : Window
+    public partial class ChangeType : Window
     {
-        public changeName()
+        public ChangeType()
         {
             InitializeComponent();
         }
-        public void change(ref Customer c)
-        {
-            c.Name = name_text.Text;
-        }
         public void change(ref boss c)
         {
-            c.Name = name_text.Text;
+            c.TypeOfRestaurant = type_text.Text;
         }
+        private void Name_text_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("با موفقیت انجام شد");

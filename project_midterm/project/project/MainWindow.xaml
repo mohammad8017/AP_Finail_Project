@@ -74,7 +74,7 @@
                     <Button x:Name="pass_change" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,232,0,0" VerticalAlignment="Top" Width="62" Click="Pass_change_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="عکس پروفایل"/></TextBlock>
                     <Button x:Name="upload_image" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,285,0,0" VerticalAlignment="Top" Width="62" Click="upload_image_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
-                    <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="117" Margin="66,324,0,0" VerticalAlignment="Top" Width="172" Stretch="Fill"/>
+                    <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="117" Margin="66,324,0,0" VerticalAlignment="Top" Width="172" Stretch="Fill" OpacityMask="Black"/>
                 </Grid>
             </TabItem>
         </TabControl>

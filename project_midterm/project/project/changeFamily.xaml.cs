@@ -28,6 +28,10 @@ namespace project
         {
             c.Family = family_text.Text;
         }
+        public void change(ref boss c)
+        {
+            c.Family = family_text.Text;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("با موفقیت انجام شد");

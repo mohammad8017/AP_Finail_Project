@@ -15,26 +15,28 @@ using System.Windows.Shapes;
 namespace project
 {
     /// <summary>
-    /// Interaction logic for changeName.xaml
+    /// Interaction logic for ChangeRegion.xaml
     /// </summary>
-    public partial class changeName : Window
+    public partial class ChangeRegion : Window
     {
-        public changeName()
+        public ChangeRegion()
         {
             InitializeComponent();
         }
-        public void change(ref Customer c)
-        {
-            c.Name = name_text.Text;
-        }
         public void change(ref boss c)
         {
-            c.Name = name_text.Text;
+            c.Region = int.Parse(region_text.Text);
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("با موفقیت انجام شد");
             this.Close();
+        }
+
+        private void region_text_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

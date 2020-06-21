@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="signup2.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="43" Margin="10,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" FontSize="14" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"><Run FlowDirection="RightToLeft" Text="خوش آمدید"/><LineBreak/></TextBlock>
-        <Button x:Name="boss" Content="مدیر" HorizontalAlignment="Left" Height="33" Margin="44,123,0,0" VerticalAlignment="Top" Width="123" FontWeight="Bold" FontSize="14" BorderBrush="Black">
+        <Button x:Name="boss" Content="مدیر" HorizontalAlignment="Left" Height="33" Margin="44,123,0,0" VerticalAlignment="Top" Width="123" FontWeight="Bold" FontSize="14" BorderBrush="Black" Click="Boss_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

@@ -55,7 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Boss.cs" />
+    <Compile Include="boss.cs" />
+    <Compile Include="Boss.xaml.cs">
+      <DependentUpon>Boss.xaml</DependentUpon>
+    </Compile>
     <Compile Include="changeEmail.xaml.cs">
       <DependentUpon>changeEmail.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,12 @@
     <Compile Include="changePhone.xaml.cs">
       <DependentUpon>changePhone.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeRegion.xaml.cs">
+      <DependentUpon>ChangeRegion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeType.xaml.cs">
+      <DependentUpon>ChangeType.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Signup_window.xaml.cs">
       <DependentUpon>Signup_window.xaml</DependentUpon>
@@ -78,6 +87,10 @@
     <Compile Include="statUp.xaml.cs">
       <DependentUpon>statUp.xaml</DependentUpon>
     </Compile>
+    <Page Include="Boss.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="changeEmail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +108,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="changePhone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeRegion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeType.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

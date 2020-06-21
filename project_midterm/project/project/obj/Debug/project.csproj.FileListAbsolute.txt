@@ -27,3 +27,9 @@ F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.baml
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.g.cs
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Boss.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeRegion.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeType.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Boss.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeRegion.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeType.baml
