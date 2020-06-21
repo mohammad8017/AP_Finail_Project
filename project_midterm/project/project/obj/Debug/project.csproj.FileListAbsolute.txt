@@ -25,3 +25,5 @@ F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.baml
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.baml
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.baml

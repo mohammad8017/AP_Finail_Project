@@ -126,6 +126,9 @@ namespace project
 
         private void Btn8_Click(object sender, RoutedEventArgs e)
         {
+            statUp start = new statUp();
+            MessageBox.Show("شما از حساب خود خارج شدید");
+            start.Show();
             this.Close();
             
         }

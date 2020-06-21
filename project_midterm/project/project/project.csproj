@@ -75,6 +75,9 @@
     <Compile Include="Signup_window.xaml.cs">
       <DependentUpon>Signup_window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="statUp.xaml.cs">
+      <DependentUpon>statUp.xaml</DependentUpon>
+    </Compile>
     <Page Include="changeEmail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,6 +111,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Signup_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="statUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
