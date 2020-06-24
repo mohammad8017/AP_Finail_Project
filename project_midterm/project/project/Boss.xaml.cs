@@ -146,5 +146,25 @@ namespace project
         {
             daramadText.Text = Hold.daramad.ToString();
         }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            bool isValid = false;
+            for(int i = 0; i < foodList.Count; i++)
+            {
+                if (foodList[i].Name == FoodName.Text)
+                {
+                    //nowNum.Text = foodList[i].Mojoodi.ToString();
+                    foodList[i].Mojoodi = int.Parse(newNum.Text);
+                    isValid = true;
+                    FoodName.Clear();
+                    newNum.Clear();
+                }
+            }
+            if (isValid)
+                MessageBox.Show("تعداد موجودی تغییر یافت");
+            else
+                MessageBox.Show("نام غذای وارد شده نادرست است");
+        }
     }
 }

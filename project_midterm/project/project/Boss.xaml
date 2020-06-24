@@ -48,7 +48,7 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <GroupBox Margin="10,10,10.4,392.6" Padding="10">
+                    <GroupBox Margin="10,10,10.4,354.6" Padding="10">
                         <GroupBox.Header>
                             <StackPanel Orientation="Horizontal">
 
@@ -87,6 +87,27 @@
                                 </TextBox.Background>
                             </TextBox>
                             <Button x:Name="saveBtn" Margin="0,20,-0.4,20" Content="ثبت" BorderBrush="#FF16152E" Click="SaveBtn_Click">
+                                <Button.Background>
+                                    <ImageBrush/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="تغییر تعداد غذا" Margin="10,316,10.4,133.6" Padding="10" Foreground="#FF85C236">
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">نام غذا:</TextBlock>
+                            <TextBox x:Name="FoodName" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تعداد جدید:</TextBlock>
+                            <TextBox x:Name="newNum" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Button x:Name="SaveBtn" Margin="0,20,-0.4,20" Content="ثبت" BorderBrush="#FF16152E" Click="Save_Click">
                                 <Button.Background>
                                     <ImageBrush/>
                                 </Button.Background>
