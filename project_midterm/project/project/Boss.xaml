@@ -32,7 +32,7 @@
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="نام خانوادگی"/><Run Text=" "/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="منطقه رستوران"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="نوع رستوران"/></TextBlock>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Span FlowDirection="RightToLeft"><Run Text="عکس "/><Run Text="رستوران"/></Span></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Span FlowDirection="RightToLeft"><Run Text="منو"/><Run Text=" "/><Run Text="رستوران"/></Span></TextBlock>
                     <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="117" Margin="66,324,0,0" VerticalAlignment="Top" Width="172" Stretch="Fill"/>
                     <Button x:Name="name_change" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,97,0,0" VerticalAlignment="Top" Width="62" Click="Name_change_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
                     <Button x:Name="family_change" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,143,0,0" VerticalAlignment="Top" Width="62" Click="Family_change_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
@@ -41,6 +41,52 @@
                     <Button x:Name="upload_image" Content="کلیک کنید" HorizontalAlignment="Left" Height="20" Margin="176,285,0,0" VerticalAlignment="Top" Width="62" Click="upload_image_Click" Background="{x:Null}" BorderBrush="#FFF3F0F0" FontWeight="Bold"/>
                     <Button x:Name="btn6" Content="صفحه قبل" HorizontalAlignment="Left" Height="42" Margin="330,0,0,22.6" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn6_Click" BorderBrush="{x:Null}"/>
                     <Button x:Name="btn8_Copy" Content="خروج" HorizontalAlignment="Left" Height="42" Margin="117,0,0,21.6" VerticalAlignment="Bottom" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn8_Click" BorderBrush="{x:Null}"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab3" Header="منو" FontWeight="Bold">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <GroupBox Margin="10,10,10.4,392.6" Padding="10">
+                        <GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                
+                                <TextBlock FontWeight="Bold" Foreground="#FF85C236">ثبت غذا</TextBlock>
+                            </StackPanel>
+                        </GroupBox.Header>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">نام غذا:</TextBlock>
+                            <TextBox x:Name="foodname" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">قیمت:</TextBlock>
+                            <TextBox x:Name="foodPrice" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">اطلاعات:</TextBlock>
+                            <TextBox x:Name="foodInfo" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تعداد موجودی:</TextBlock>
+                            <TextBox x:Name="foodNum" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Button x:Name="saveBtn" Margin="0,20,-0.4,20" Content="ثبت" BorderBrush="#FF16152E" Click="SaveBtn_Click">
+                                <Button.Background>
+                                    <ImageBrush/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </GroupBox>
                 </Grid>
             </TabItem>
         </TabControl>

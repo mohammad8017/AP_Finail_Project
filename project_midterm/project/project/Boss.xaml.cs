@@ -23,6 +23,7 @@ namespace project
     {
         public boss Hold = new boss();
         public bool signIn = false;
+        List<Food> foodList = new List<Food>();
         public Modir()
         {
             InitializeComponent();
@@ -118,6 +119,15 @@ namespace project
         private void Btn6_Click(object sender, RoutedEventArgs e)
         {
             tabControl.SelectedItem = tab1;
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text)));
+            foodname.Clear();
+            foodPrice.Clear();
+            foodInfo.Clear();
+            foodNum.Clear();
         }
     }
 }

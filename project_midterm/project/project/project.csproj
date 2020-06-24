@@ -81,6 +81,7 @@
       <DependentUpon>ChangeType.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="Food.cs" />
     <Compile Include="Signup_window.xaml.cs">
       <DependentUpon>Signup_window.xaml</DependentUpon>
     </Compile>
@@ -174,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="signup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="menu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
