@@ -123,11 +123,28 @@ namespace project
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text)));
+            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text)));
             foodname.Clear();
             foodPrice.Clear();
+            FoodPrice.Clear();
             foodInfo.Clear();
             foodNum.Clear();
+        }
+        
+
+        private void SoodBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("سود شما تا این لحظه\n" + (int.Parse(daramadText.Text) - int.Parse(hazineText.Text)));
+        }
+
+        private void HazineText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            hazineText.Text = Hold.hazine.ToString();
+        }
+
+        private void DaramadText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            daramadText.Text = Hold.daramad.ToString();
         }
     }
 }

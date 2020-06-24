@@ -9,16 +9,18 @@ namespace project
     class Food
     {
         public string Name { set; get; }
-        public int Price { set; get; }
+        public int FinishPrice { set; get; }//moshtari
+        public int RealPrice { set; get; }
         public string Info { set; get; }
         public int Mojoodi { set; get; }
         public Food() {; }
-        public Food(string Name, int Price, string Info, int Mojoodi)
+        public Food(string Name, int FinishPrice, int RealPrice, string Info, int Mojoodi)
         {
             this.Name = Name;
-            this.Price = Price;
+            this.FinishPrice = FinishPrice;
+            this.RealPrice = RealPrice;
             this.Info = Info;
-            this.Mojoodi = Mojoodi;
+            this.Mojoodi=Mojoodi;
         }
     }
 }

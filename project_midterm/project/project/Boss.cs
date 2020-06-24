@@ -15,6 +15,8 @@ namespace project
         public int Region { set; get; }
         public string Address { set; get; }
         public string TypeOfRestaurant { set; get; }
+        public int hazine = 0;
+        public int daramad = 0;
         public boss() {; }
         public boss(string name, string family, int code, string pass, string address, int region, string type)
         {
