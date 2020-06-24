@@ -36,9 +36,34 @@ namespace project
             CreateObj();
             bool check = true;
 
+            if(!customer.Last().IsValidName(name_text.Text))
+            {
+                MessageBox.Show("فرمت نام نادرست است");
+                check = false;
+            }
+            if (!customer.Last().IsValidName(family_text.Text))
+            {
+                MessageBox.Show("فرمت نام خانوادگی نادرست است");
+                check = false;
+            }
+            if (!customer.Last().IsPhoneNumber(phone_num_text.Text))
+            {
+                MessageBox.Show("فرمت شماره تلفن نادرست است");
+                check = false;
+            }
             if (!customer.Last().isValidEmail())
             {
                 MessageBox.Show("فرمت ایمیل نادرست است");
+                check = false;
+            }
+            if (!customer.Last().checkNationalId(code_text.Text))
+            {
+                MessageBox.Show("فرمت کدملی نادرست است");
+                check = false;
+            }
+            if (!customer.Last().IsValidPass(pass_text.Text))
+            {
+                MessageBox.Show("فرمت کلمه عبور نادرست است");
                 check = false;
             }
             if (pass_text.ToString() != repeat_pass_text.ToString())
@@ -46,7 +71,9 @@ namespace project
                 MessageBox.Show("رمز عبور و تکرار آن یکسان نیستند");
                 check = false;
             }
-
+            
+            
+            
             if (check)
             {
                 MessageBox.Show("ثبت نام شما با موفقیت انجام شد");
