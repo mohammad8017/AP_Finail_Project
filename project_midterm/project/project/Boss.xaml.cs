@@ -124,12 +124,15 @@ namespace project
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text)));
+            var mtp = foodDate.Text.Split('.');
+            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text), int.Parse(mtp[0]), int.Parse(mtp[1]), int.Parse(mtp[2])));
             foodname.Clear();
             foodPrice.Clear();
             FoodPrice.Clear();
             foodInfo.Clear();
             foodNum.Clear();
+            foodDate.Clear();
+
         }
         
 

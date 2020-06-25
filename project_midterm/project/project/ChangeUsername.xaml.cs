@@ -30,6 +30,7 @@ namespace project
             {
                 b.Username = user_text.Text;
                 check = true;
+                DateTime
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
