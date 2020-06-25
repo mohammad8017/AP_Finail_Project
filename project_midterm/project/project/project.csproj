@@ -80,6 +80,9 @@
     <Compile Include="ChangeType.xaml.cs">
       <DependentUpon>ChangeType.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeUsername.xaml.cs">
+      <DependentUpon>ChangeUsername.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="Signup_window.xaml.cs">
@@ -117,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChangeType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeUsername.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

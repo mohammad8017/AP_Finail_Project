@@ -15,6 +15,9 @@ namespace project
         public int Region { set; get; }
         public string Address { set; get; }
         public string TypeOfRestaurant { set; get; }
+        public string Username { set; get; }
+
+        public int signInNum = 0;
         public int hazine = 0;
         public int daramad = 0;
         public boss() {; }

@@ -54,6 +54,7 @@ namespace project
                     Hold = t.bosses[i];
                     signIn = true;
                     check = true;
+                    Hold.signInNum++;
                 }
                     
             }
@@ -165,6 +166,20 @@ namespace project
                 MessageBox.Show("تعداد موجودی تغییر یافت");
             else
                 MessageBox.Show("نام غذای وارد شده نادرست است");
+        }
+
+        private void EditUsername_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeUsername change = new ChangeUsername();
+            change.Show();
+            change.change(ref Hold);
+        }
+
+        private void EditPass_Click(object sender, RoutedEventArgs e)
+        {
+            changePass change = new changePass();
+            change.Show();
+            change.change(ref Hold);
         }
     }
 }
