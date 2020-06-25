@@ -186,5 +186,11 @@ namespace project
                 imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
             }
         }
+
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
+            string tmp = caledar.SelectedDate.Value.Date.ToShortDateString();// ToString();
+            MessageBox.Show(tmp);
+        }
     }
 }

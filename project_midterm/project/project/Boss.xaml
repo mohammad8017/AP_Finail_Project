@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project"
         mc:Ignorable="d"
-        Title="صفحه مدیر" Height="700" Width="550" FontSize="14">
+        Title="صفحه مدیر" Height="700" Width="550" FontSize="14" WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl Name="tabControl" HorizontalAlignment="Left" Height="684" Margin="0,0,0,-13.6" VerticalAlignment="Top" Width="544">
             <TabItem x:Name="tab1" Header="ورود" FontWeight="Bold">
@@ -91,7 +91,7 @@
                                 </TextBox.Background>
                             </TextBox>
                             <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تاریخ عرضه:</TextBlock>
-                            <TextBox x:Name="foodDate" BorderBrush="White" Foreground="#FFB9AFAF" >
+                            <TextBox x:Name="foodDate" BorderBrush="White" Foreground="#FFB9AFAF" ToolTip="sample : 26/6/2020" >
                                 <TextBox.Background>
                                     <ImageBrush/>
                                 </TextBox.Background>
