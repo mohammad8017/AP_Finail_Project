@@ -27,6 +27,7 @@ namespace project
         public Customer Hold = new Customer();
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
+        public Modir holdSource = new Modir();
         public MainWindow()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace project
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
 
             //statUp nnn = new statUp();
-            Modir holdSource = new Modir();
+            
             for (int i = 0; i < holdSource.foodList.Count; i++)
             {
                 if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
@@ -218,6 +219,11 @@ namespace project
                     sabadKharid.Add(source[i]);
                     MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
                     source[i].Mojoodi--;
+                    for(int j = 0; j < holdSource.foodList.Count; j++)
+                    {
+                        if (holdSource.foodList[j].Name.Equals(holdName))
+                            holdSource.foodList[j].Mojoodi--;
+                    }
                 }
             }
 
