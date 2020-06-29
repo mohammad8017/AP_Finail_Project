@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace project
 {
+   
     public class boss
     {
         public string Name { set; get; }
@@ -16,6 +17,7 @@ namespace project
         public string Address { set; get; }
         public string TypeOfRestaurant { set; get; }
         public string Username { set; get; }
+
 
         public int signInNum = 0;
         public int hazine = 0;

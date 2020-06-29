@@ -32,10 +32,20 @@ namespace project
             d = DateTime.Now;
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
 
+            Modir holdSource = new Modir();
+            List<Food> source = new List<Food>();
+            for(int i=0; i < holdSource.foodList.Count; i++)
+            {
+                if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
+                    source.Add(holdSource.foodList[i]);
+            }
+            dataGrid.ItemsSource = source;
+
+
             //Signup_window window = new Signup_window();
             //window.CreateObj();
             //customers.Add(new Customer(window.name_text.Text, window.family_text.Text, double.Parse(window.phone_num_text.Text), window.email_text.Text, double.Parse(window.phone_num_text.Text), window.pass_text.Text));
-            
+
         }
 
         private void Btn1_Click(object sender, RoutedEventArgs e)
@@ -192,5 +202,6 @@ namespace project
             string tmp = caledar.SelectedDate.Value.Date.ToShortDateString();// ToString();
             MessageBox.Show(tmp);
         }
+       
     }
 }

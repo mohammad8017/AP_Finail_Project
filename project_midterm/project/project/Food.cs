@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project
 {
-    class Food
+    public class Food
     {
         public string Name { set; get; }
         public int FinishPrice { set; get; }//moshtari

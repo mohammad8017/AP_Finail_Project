@@ -18,12 +18,13 @@ namespace project
     /// <summary>
     /// Interaction logic for Boss.xaml
     /// </summary>
-    
+   
     public partial class Modir : Window
     {
         public boss Hold = new boss();
         public bool signIn = false;
-        List<Food> foodList = new List<Food>();
+        public List<Food> foodList = new List<Food>();
+        
         public Modir()
         {
             InitializeComponent();
