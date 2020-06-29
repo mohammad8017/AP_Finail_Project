@@ -19,11 +19,14 @@ namespace project
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
         public bool signIn = false;
         //public List<Customer> customers = new List<Customer>();
         public Customer Hold = new Customer();
+        public List<Food> sabadKharid = new List<Food>();
+        public List<Food> source = new List<Food>();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,15 +35,16 @@ namespace project
             d = DateTime.Now;
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
 
-            Modir holdSource = new Modir();
-            List<Food> source = new List<Food>();
-            for(int i=0; i < holdSource.foodList.Count; i++)
-            {
-                if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
-                    source.Add(holdSource.foodList[i]);
-            }
-            dataGrid.ItemsSource = source;
-
+            statUp nnn = new statUp();
+            //Modir holdSource = new Modir();
+            ////List<Food> source = new List<Food>();
+            //for(int i=0; i < holdSource.foodList.Count; i++)
+            //{
+            //    if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
+            //        source.Add(holdSource.foodList[i]);
+            //}
+            //dataGrid.ItemsSource = source;
+            dataGrid.ItemsSource = nnn.bosses;
 
             //Signup_window window = new Signup_window();
             //window.CreateObj();
@@ -202,6 +206,23 @@ namespace project
             string tmp = caledar.SelectedDate.Value.Date.ToShortDateString();// ToString();
             MessageBox.Show(tmp);
         }
-       
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var tmp = dataGrid.SelectedCells;
+            MessageBox.Show((tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text);
+            var holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+            for(int i = 0; i < source.Count; i++)
+            {
+                if (source[i].Name.Equals(holdName))
+                {
+                    sabadKharid.Add(source[i]);
+                    MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
+                    source[i].Mojoodi--;
+                }
+            }
+
+            //if(int.Parse(tmp[tmp.Count-1].ToString))
+        }
     }
 }
