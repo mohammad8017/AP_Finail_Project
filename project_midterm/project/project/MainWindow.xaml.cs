@@ -35,16 +35,15 @@ namespace project
             d = DateTime.Now;
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
 
-            statUp nnn = new statUp();
-            //Modir holdSource = new Modir();
-            ////List<Food> source = new List<Food>();
-            //for(int i=0; i < holdSource.foodList.Count; i++)
-            //{
-            //    if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
-            //        source.Add(holdSource.foodList[i]);
-            //}
-            //dataGrid.ItemsSource = source;
-            dataGrid.ItemsSource = nnn.bosses;
+            //statUp nnn = new statUp();
+            Modir holdSource = new Modir();
+            for (int i = 0; i < holdSource.foodList.Count; i++)
+            {
+                if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
+                    source.Add(holdSource.foodList[i]);
+            }
+            dataGrid.ItemsSource = source;
+            //dataGrid.ItemsSource = nnn.bosses;
 
             //Signup_window window = new Signup_window();
             //window.CreateObj();
