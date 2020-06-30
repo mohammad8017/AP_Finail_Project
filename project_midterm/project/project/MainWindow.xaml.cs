@@ -28,6 +28,8 @@ namespace project
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
         public Modir holdSource = new Modir();
+        public string Emza;
+        public double HesabNum;
         public MainWindow()
         {
             InitializeComponent();
@@ -44,6 +46,8 @@ namespace project
                     source.Add(holdSource.foodList[i]);
             }
             dataGrid.ItemsSource = source;
+
+            dataSabad.ItemsSource = sabadKharid;
             //dataGrid.ItemsSource = nnn.bosses;
 
             //Signup_window window = new Signup_window();
@@ -217,6 +221,7 @@ namespace project
                 if (source[i].Name.Equals(holdName))
                 {
                     sabadKharid.Add(source[i]);
+                    sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
                     MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
                     source[i].Mojoodi--;
                     for(int j = 0; j < holdSource.foodList.Count; j++)
@@ -228,6 +233,64 @@ namespace project
             }
 
             //if(int.Parse(tmp[tmp.Count-1].ToString))
+        }
+
+        private void ChangeNum_Click(object sender, RoutedEventArgs e)
+        {
+            if (newNum.Text != null)
+            {
+                var tmp = dataSabad.SelectedCells;
+                var holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+                for (int i = 0; i < sabadKharid.Count; i++)
+                {
+                    if (sabadKharid[i].Name.Equals(holdName))
+                    {
+                        for (int j = 0; j < holdSource.foodList.Count; j++)
+                        {
+                            if (holdSource.foodList[j].Name.Equals(holdName))
+                            {
+                                holdSource.foodList[j].Mojoodi += sabadKharid[i].Mojoodi;
+                                if(int.Parse(newNum.Text)> holdSource.foodList[j].Mojoodi)
+                                {
+                                    MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
+                                }
+                                else
+                                {
+                                    holdSource.foodList[j].Mojoodi -= int.Parse(newNum.Text);
+                                    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+                                    MessageBox.Show($"تعداد تغییر یافت");
+                                }                                   
+                            }     
+                        }
+                    }
+                }
+            }
+            else
+                MessageBox.Show($"تعداد جدید وارد نشده است");
+
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            var tmp = dataSabad.SelectedCells;
+            var holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+            for (int i = 0; i < sabadKharid.Count; i++)
+            {
+                if (sabadKharid[i].Name.Equals(holdName))
+                {
+                    sabadKharid.RemoveAt(i);
+                    MessageBox.Show($"غذای انتخابی از سبد حذف شد");
+                }
+            }
+        }
+
+        private void Finish_Click(object sender, RoutedEventArgs e)
+        {
+            emza tmp = new emza();
+            tmp.Show();
+            HesabNum = tmp.HesabNum;
+            Emza = tmp.Emzaa;
+            tabControl.SelectedItem = tab5;
         }
     }
 }

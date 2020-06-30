@@ -84,6 +84,9 @@
       <DependentUpon>ChangeUsername.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="emza.xaml.cs">
+      <DependentUpon>emza.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Food.cs" />
     <Compile Include="Signup_window.xaml.cs">
       <DependentUpon>Signup_window.xaml</DependentUpon>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChangeUsername.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="emza.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

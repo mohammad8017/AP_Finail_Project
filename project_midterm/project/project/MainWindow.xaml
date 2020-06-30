@@ -100,8 +100,33 @@
                     <Label Content="روز انتخاب شده:" HorizontalAlignment="Left" Height="31" Margin="10,76,0,0" VerticalAlignment="Top" Width="166" FontWeight="Bold" FontFamily="Tahoma" FontSize="14" Foreground="#FFCABFBF"/>
                     <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="302" Margin="10,215,0,0" VerticalAlignment="Top" Width="518" SelectionUnit="FullRow" ToolTip="یک ستون را انتخاب کنید" SelectionChanged="DataGrid_SelectionChanged"/>
                     <TextBlock HorizontalAlignment="Left" Margin="148,76,0,0" TextWrapping="Wrap" Text="{Binding SelectedDate, ElementName=caledar}" VerticalAlignment="Top" Width="146" Height="31" Foreground="#FFEAE2E2" FontFamily="Tahoma" FontWeight="Bold" FontSize="14"/>
-
-
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab4" Header="سبد خرید">
+                <Grid x:Name="txt233" RenderTransformOrigin="0.546,0.459">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <DataGrid x:Name="dataSabad" HorizontalAlignment="Left" Height="539" Margin="37,25,0,0" VerticalAlignment="Top" Width="466" SelectionUnit="FullRow" ToolTip="یک ستون را انتخاب کنید"/>
+                    <Button x:Name="changeNum" Content="تغییر تعداد" HorizontalAlignment="Left" Height="36" Margin="37,587,0,0" VerticalAlignment="Top" Width="101" FontSize="14" FontWeight="Bold" ToolTip="کلیک کنید" Click="ChangeNum_Click"/>
+                    <Button x:Name="finish" Content="نهایی کردن" HorizontalAlignment="Left" Height="36" Margin="402,587,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Finish_Click"/>
+                    <TextBox x:Name="newNum" HorizontalAlignment="Left" Height="36" Margin="147,587,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111" ToolTip="تعداد را وارد کنید" TextAlignment="Center" BorderBrush="#FFD8DCE8" Foreground="#FFFF8888">
+                        <TextBox.Background>
+                            <ImageBrush/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Button x:Name="delete" Content="حذف از سبد" HorizontalAlignment="Left" Height="36" Margin="293,587,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Delete_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab5" Header="فاکتور">
+                <Grid x:Name="txt43" RenderTransformOrigin="0.546,0.459">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="519*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
                 </Grid>
             </TabItem>
         </TabControl>
