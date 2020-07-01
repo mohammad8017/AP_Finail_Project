@@ -27,9 +27,10 @@ namespace project
         public Customer Hold = new Customer();
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
-        public Modir holdSource = new Modir();
+        public List<Food> allFood = new List<Food>();
         public string Emza;
         public double HesabNum;
+        string[] tarikh = new string[3];
         public MainWindow()
         {
             InitializeComponent();
@@ -38,16 +39,13 @@ namespace project
             d = DateTime.Now;
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
 
+
             //statUp nnn = new statUp();
             
-            for (int i = 0; i < holdSource.foodList.Count; i++)
-            {
-                if (holdSource.foodList[i].foodDate.Equals(caledar.SelectedDate.Value.Date))
-                    source.Add(holdSource.foodList[i]);
-            }
-            dataGrid.ItemsSource = source;
+            //source.Add(new Food("pizza", 12000, 3000, "morgh", 23, 6, 30, 2020));
+            //dataGrid.ItemsSource = source;
 
-            dataSabad.ItemsSource = sabadKharid;
+            
             //dataGrid.ItemsSource = nnn.bosses;
 
             //Signup_window window = new Signup_window();
@@ -76,7 +74,10 @@ namespace project
                 }  
             }
             if (check)
+            {
+                
                 MessageBox.Show("شما وارد حساب خود شدید");
+            }   
             else
                 MessageBox.Show("کلمه عبور یا ایمیل نادرست است");
 
@@ -207,14 +208,21 @@ namespace project
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            string tmp = caledar.SelectedDate.Value.Date.ToShortDateString();// ToString();
-            MessageBox.Show(tmp);
+            allFood = Modir.foodTemp;
+            for (int i = 0; i < allFood.Count; i++)
+            {
+                var temp = caledar.SelectedDate.Value.Date.ToShortDateString();
+                if (temp.Equals(allFood[i].date.ToShortDateString()))
+                    source.Add(allFood[i]);
+            }
+            dataGrid.ItemsSource = source;
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
             var tmp = dataGrid.SelectedCells;
-            MessageBox.Show((tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text);
+            //MessageBox.Show((tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text);
             var holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
             for(int i = 0; i < source.Count; i++)
             {
@@ -224,14 +232,14 @@ namespace project
                     sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
                     MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
                     source[i].Mojoodi--;
-                    for(int j = 0; j < holdSource.foodList.Count; j++)
+                    for(int j = 0; j < allFood.Count; j++)
                     {
-                        if (holdSource.foodList[j].Name.Equals(holdName))
-                            holdSource.foodList[j].Mojoodi--;
+                        if (allFood[j].Name.Equals(holdName))
+                            allFood[j].Mojoodi--;
                     }
                 }
             }
-
+            dataSabad.ItemsSource = sabadKharid;
             //if(int.Parse(tmp[tmp.Count-1].ToString))
         }
 
@@ -245,19 +253,24 @@ namespace project
                 {
                     if (sabadKharid[i].Name.Equals(holdName))
                     {
-                        for (int j = 0; j < holdSource.foodList.Count; j++)
+                        //MessageBox.Show("1");
+
+                        for (int j = 0; j < allFood.Count; j++)
                         {
-                            if (holdSource.foodList[j].Name.Equals(holdName))
+                            if (allFood[j].Name.Equals(holdName))
                             {
-                                holdSource.foodList[j].Mojoodi += sabadKharid[i].Mojoodi;
-                                if(int.Parse(newNum.Text)> holdSource.foodList[j].Mojoodi)
+                                //MessageBox.Show("2");
+                                allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
+                                if(int.Parse(newNum.Text)> allFood[j].Mojoodi)
                                 {
                                     MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
                                 }
                                 else
                                 {
-                                    holdSource.foodList[j].Mojoodi -= int.Parse(newNum.Text);
+                                    allFood[j].Mojoodi -= int.Parse(newNum.Text);
                                     sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+                                    
+                                    dataSabad.ItemsSource = sabadKharid;
                                     MessageBox.Show($"تعداد تغییر یافت");
                                 }                                   
                             }     
@@ -279,6 +292,7 @@ namespace project
                 if (sabadKharid[i].Name.Equals(holdName))
                 {
                     sabadKharid.RemoveAt(i);
+                    dataSabad.ItemsSource = sabadKharid;
                     MessageBox.Show($"غذای انتخابی از سبد حذف شد");
                 }
             }
@@ -291,6 +305,16 @@ namespace project
             HesabNum = tmp.HesabNum;
             Emza = tmp.Emzaa;
             tabControl.SelectedItem = tab5;
+        }
+
+        private void Test_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sabt_Click(object sender, RoutedEventArgs e)
+        {
+            tabControl.SelectedItem = tab3;
         }
     }
 }

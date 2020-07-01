@@ -28,7 +28,7 @@ namespace project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Emzaa = emza_text.Text;
+            Emzaa = emzaa_text.Text;
             try
             {
                 HesabNum = double.Parse(hesab_text.Text);
@@ -39,6 +39,11 @@ namespace project
                 MessageBox.Show("فرمت شماره حساب نا درست است");
             }
             
+        }
+
+        private void Name_text_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

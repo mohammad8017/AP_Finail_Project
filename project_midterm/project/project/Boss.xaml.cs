@@ -18,12 +18,13 @@ namespace project
     /// <summary>
     /// Interaction logic for Boss.xaml
     /// </summary>
-   
+    
     public partial class Modir : Window
     {
         public boss Hold = new boss();
         public bool signIn = false;
         public List<Food> foodList = new List<Food>();
+        public static List<Food> foodTemp = new List<Food>();
         
         public Modir()
         {
@@ -126,14 +127,17 @@ namespace project
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             var mtp = foodDate.Text.Split('/');
+            
+            //foodList.Add(new Food("pizza", 12000, 3000, "morgh", 23, 7, 1, 2020));
             foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text), int.Parse(mtp[0]), int.Parse(mtp[1]), int.Parse(mtp[2])));
+            foodTemp = foodList;
             foodname.Clear();
             foodPrice.Clear();
             FoodPrice.Clear();
             foodInfo.Clear();
             foodNum.Clear();
             foodDate.Clear();
-
+            MessageBox.Show("ثبت شد");
         }
         
 

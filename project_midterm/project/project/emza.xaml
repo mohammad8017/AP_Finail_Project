@@ -11,8 +11,8 @@
             <ImageBrush ImageSource="signup2.jpg"/>
         </Grid.Background>
         <Button x:Name="btn" Content="تایید" HorizontalAlignment="Left" Height="36" Margin="121,129,0,0" VerticalAlignment="Top" Width="133" Click="Button_Click" Background="{x:Null}" BorderBrush="#FF121111" FontWeight="Bold" FontSize="14"/>
-        <TextBlock x:Name="emza" HorizontalAlignment="Left" Height="27" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="امضا"/><Run Text=": "/></TextBlock>
-        <TextBox x:Name="emza_text" HorizontalAlignment="Left" Height="27" Margin="121,26,0,0" TextWrapping="Wrap" Foreground="#FF141C2C" Text="" VerticalAlignment="Top" Width="250" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="#FF151618" TextChanged="Name_text_TextChanged"/>
+        <TextBlock x:Name="emzaa" HorizontalAlignment="Left" Height="27" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="امضا"/><Run Text=": "/></TextBlock>
+        <TextBox x:Name="emzaa_text" HorizontalAlignment="Left" Height="27" Margin="121,26,0,0" TextWrapping="Wrap" Foreground="#FF141C2C" Text="" VerticalAlignment="Top" Width="250" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="#FF151618" TextChanged="Name_text_TextChanged"/>
         <TextBox x:Name="hesab_text" HorizontalAlignment="Left" Height="27" Margin="121,72,0,0" TextWrapping="Wrap" Foreground="#FF141C2C" Text="" VerticalAlignment="Top" Width="250" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="#FF151618" TextChanged="Name_text_TextChanged"/>
         <TextBlock x:Name="hesab" HorizontalAlignment="Left" Height="27" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16"><Run FlowDirection="RightToLeft" Text="شماره حساب"/><Run Text=": "/></TextBlock>
 
