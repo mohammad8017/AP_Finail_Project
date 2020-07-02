@@ -143,18 +143,10 @@ namespace project
 
         private void SoodBtn_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("سود شما تا این لحظه\n" + (int.Parse(daramadText.Text) - int.Parse(hazineText.Text)));
+            MessageBox.Show("سود شما تا این لحظه\n" + (MainWindow.daramad - MainWindow.hazine));
         }
 
-        private void HazineText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            hazineText.Text = Hold.hazine.ToString();
-        }
-
-        private void DaramadText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            daramadText.Text = Hold.daramad.ToString();
-        }
+        
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {

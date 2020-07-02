@@ -29,5 +29,19 @@ namespace project
             foodDate[2] = year;
             date = new DateTime(year, month, day);
         }
+        
+    }
+    public class FoodFactor
+    {
+        public string Name { set; get; }
+        public int FinishPrice { set; get; }
+        public int Mojoodi { set; get; }
+        public FoodFactor(string Name, int FinishPrice, int Mojoodi)
+        {
+
+            this.Name = Name;
+            this.FinishPrice = FinishPrice;
+            this.Mojoodi = Mojoodi;
+        }
     }
 }

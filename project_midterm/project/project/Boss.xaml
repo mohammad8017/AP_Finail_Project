@@ -131,19 +131,7 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" FontWeight="Normal" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Foreground="#FFE2CFCF" FontFamily="Tahoma"><Run FlowDirection="RightToLeft" Text="مجموع هزینه ها"/></TextBlock>
-                    <TextBox x:Name="hazineText" HorizontalAlignment="Left" Height="27" Margin="178,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" BorderBrush="#FFEEF1F9" TextChanged="HazineText_TextChanged">
-                        <TextBox.Background>
-                            <ImageBrush/>
-                        </TextBox.Background>
-                    </TextBox>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="10,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" FontWeight="Normal" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Foreground="#FFE2CFCF" FontFamily="Tahoma"><Span FlowDirection="RightToLeft"><Run Text="مجموع "/><Run Text="درآمد"/><Run Text=" ها"/></Span></TextBlock>
-                    <TextBox x:Name="daramadText" HorizontalAlignment="Left" Height="27" Margin="178,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" BorderBrush="#FFEEF1F9" TextChanged="DaramadText_TextChanged">
-                        <TextBox.Background>
-                            <ImageBrush/>
-                        </TextBox.Background>
-                    </TextBox>
-                    <Button x:Name="soodBtn" Content="برای نمایش مقدار سود کلیک کنید" HorizontalAlignment="Left" Height="35" Margin="10,151,0,0" VerticalAlignment="Top" Width="518" FontFamily="Tahoma" FontWeight="Bold" Click="SoodBtn_Click"/>
+                    <Button x:Name="soodBtn" Content="برای نمایش مقدار سود کلیک کنید" HorizontalAlignment="Left" Height="66" Margin="10,289,0,0" VerticalAlignment="Top" Width="518" FontFamily="Tahoma" FontWeight="Bold" Click="SoodBtn_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

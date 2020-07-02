@@ -20,7 +20,7 @@ namespace project
     public partial class emza : Window
     {
         public string Emzaa;
-        public double HesabNum;
+        public string HesabNum;
         public emza()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace project
             Emzaa = emzaa_text.Text;
             try
             {
-                HesabNum = double.Parse(hesab_text.Text);
+                HesabNum = hesab_text.Text;
                 this.Close();
             }
             catch

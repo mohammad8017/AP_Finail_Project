@@ -30,8 +30,10 @@ namespace project
         public List<Food> source = new List<Food>();
         public List<Food> allFood = new List<Food>();
         public string Emza;
-        public double HesabNum;
+        public string HesabNum;
         string[] tarikh = new string[3];
+        public static int daramad;
+        public static int hazine;
         public MainWindow()
         {
             InitializeComponent();
@@ -232,7 +234,7 @@ namespace project
                 {
                     if (source[i].Mojoodi == 0)
                     {
-                        MessageBox.Show("متاسرفم اغذاهای امروز به پایان رسریده اسرت لطفا روزدیگری را امتحان کنید");
+                        MessageBox.Show("متاسفم غذاهای امروز به پایان رسیده است لطفا روزدیگری را امتحان کنید");
 
                     }
                     else
@@ -240,12 +242,12 @@ namespace project
                         sabadKharid.Add(source[i]);
                         sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
                         MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
-                        source[i].Mojoodi--;
-                        for (int j = 0; j < allFood.Count; j++)
-                        {
-                            if (allFood[j].Name.Equals(holdName))
-                                allFood[j].Mojoodi--;
-                        }
+                        //source[i].Mojoodi--;
+                        //for (int j = 0; j < allFood.Count; j++)
+                        //{
+                        //    if (allFood[j].Name.Equals(holdName))
+                        //        allFood[j].Mojoodi--;
+                        //}
                     }
                 }
             }
@@ -258,7 +260,15 @@ namespace project
             if (newNum.Text != null)
             {
                 var tmp = dataSabad.SelectedCells;
-                var holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+                string holdName = "s";
+                try
+                {
+                    holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+                }
+                catch
+                {
+                    MessageBox.Show("غذا انتخاب نشده");
+                }
                 for (int i = 0; i < sabadKharid.Count; i++)
                 {
                     if (sabadKharid[i].Name.Equals(holdName))
@@ -270,19 +280,24 @@ namespace project
                             if (allFood[j].Name.Equals(holdName))
                             {
                                 //MessageBox.Show("2");
-                                allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
-                                if(int.Parse(newNum.Text)> allFood[j].Mojoodi)
-                                {
-                                    MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
-                                }
-                                else
-                                {
-                                    allFood[j].Mojoodi -= int.Parse(newNum.Text);
-                                    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
-                                    
-                                    dataSabad.ItemsSource = sabadKharid;
-                                    MessageBox.Show($"تعداد تغییر یافت");
-                                }                                   
+                                //allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
+                                //if(int.Parse(newNum.Text) > allFood[j].Mojoodi)
+                                //{
+                                //    MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
+                                //}
+                                //else
+                                //{
+                                //    allFood[j].Mojoodi -= int.Parse(newNum.Text);
+                                //    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+
+                                //    dataSabad.ItemsSource = sabadKharid;
+                                //    MessageBox.Show($"تعداد تغییر یافت");
+                                //}  
+                                allFood[j].Mojoodi -= int.Parse(newNum.Text);
+                                sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+
+                                dataSabad.ItemsSource = sabadKharid;
+                                MessageBox.Show($"تعداد تغییر یافت");
                             }     
                         }
                     }
@@ -312,22 +327,26 @@ namespace project
         {
             emza tmp = new emza();
             tmp.Show();
-            HesabNum = tmp.HesabNum;
-            Emza = tmp.Emzaa;
+
+            HesabNum = tmp.hesab_text.Text;
+            Emza = tmp.emzaa_text.Text;
             holdDate.Content = DateTime.Now.Date.ToShortDateString();
 
-            List<Food> holdd = new List<Food>();
+            List<FoodFactor> holdd = new List<FoodFactor>(sabadKharid.Count);
             int sum = 0;
+            int kharj = 0;
             for (int i = 0; i < sabadKharid.Count; i++)
             {
-                holdd[i].Name = sabadKharid[i].Name;
-                holdd[i].Mojoodi = sabadKharid[i].Mojoodi;
-                holdd[i].FinishPrice = sabadKharid[i].FinishPrice;
-                sum += sabadKharid[i].FinishPrice;
+                
+                holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * sabadKharid[i].FinishPrice, sabadKharid[i].Mojoodi));
+                sum += sabadKharid[i].Mojoodi * sabadKharid[i].FinishPrice;
+                kharj += sabadKharid[i].Mojoodi * sabadKharid[i].RealPrice;
             }
+            daramad = sum;
+            hazine = kharj;
             factor.ItemsSource = holdd;
             holdPrice_Copy.Content = sum.ToString();
-            holdHesab.Content = HesabNum.ToString();
+            holdHesab.Content = HesabNum;
             hold_emza.Content = Emza;
             tabControl.SelectedItem = tab5;
         }
