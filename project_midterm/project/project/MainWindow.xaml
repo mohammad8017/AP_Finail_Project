@@ -104,7 +104,7 @@
                     <Button x:Name="test" Content="کلیک کنید" HorizontalAlignment="Left" Height="19" Margin="10,191,0,0" VerticalAlignment="Top" Width="111" Click="Test_Click" FontWeight="Bold" ToolTip="برای نمایش غذا ها کلیک کنید"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tab4" Header="سبد خرید" Margin="1.4,-2,-2,0">
+            <TabItem x:Name="tab4" Header="سبد خرید" Margin="-3.6,0,3,0">
                 <Grid x:Name="txt233" RenderTransformOrigin="0.546,0.459">
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
@@ -120,7 +120,7 @@
                     <Button x:Name="delete" Content="حذف از سبد" HorizontalAlignment="Left" Height="36" Margin="293,587,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Delete_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tab5" Header="فاکتور">
+            <TabItem x:Name="tab5" Header="فاکتور" Margin="-3,0,1.4,-1">
                 <Grid x:Name="txt43" RenderTransformOrigin="0.546,0.459">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="19*"/>
@@ -129,6 +129,24 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
+                    <Label x:Name="holdName" Content="" HorizontalAlignment="Left" Height="33" Margin="72.8,42,0,0" VerticalAlignment="Top" Width="170" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="Black" FontSize="16" FontWeight="Bold" Background="#FFF4F4F4">
+                    </Label>
+                    <Label x:Name="holdDate" Content="" HorizontalAlignment="Left" Height="33" Margin="242.8,42,0,0" VerticalAlignment="Top" Width="193" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FF020202" FontWeight="Bold" FontSize="16" Background="#FFF4F4F4">
+                    </Label>
+                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="280" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
+                    <Label x:Name="holdPrice" Content="جمع کل" HorizontalAlignment="Left" Height="33" Margin="72.8,322,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
+                        <Label.Background>
+                            <ImageBrush/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="holdPrice_Copy" Content="" HorizontalAlignment="Left" Height="33" Margin="141.8,322,0,0" VerticalAlignment="Top" Width="294" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
+                        <Label.Background>
+                            <ImageBrush/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="hold_emza" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,355,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="holdHesab" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,355,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
+                    <Button x:Name="print" Content="چاپ فاکتور" HorizontalAlignment="Left" Height="40" Margin="72.8,395,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Print_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

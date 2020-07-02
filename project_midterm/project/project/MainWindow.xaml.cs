@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 
+
 namespace project
 {
     /// <summary>
@@ -23,7 +24,7 @@ namespace project
     public partial class MainWindow : Window
     {
         public bool signIn = false;
-        //public List<Customer> customers = new List<Customer>();
+        //public Customer customer;
         public Customer Hold = new Customer();
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
@@ -71,6 +72,7 @@ namespace project
                     Hold.NationalCode = Signup_window.customer[i].NationalCode;
                     Hold.Email = Signup_window.customer[i].Email;
                     Hold.Pass = Signup_window.customer[i].Pass;
+                    holdName.Content = Hold.Name + " " + Hold.Family;
                 }  
             }
             if (check)
@@ -228,14 +230,22 @@ namespace project
             {
                 if (source[i].Name.Equals(holdName))
                 {
-                    sabadKharid.Add(source[i]);
-                    sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
-                    MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
-                    source[i].Mojoodi--;
-                    for(int j = 0; j < allFood.Count; j++)
+                    if (source[i].Mojoodi == 0)
                     {
-                        if (allFood[j].Name.Equals(holdName))
-                            allFood[j].Mojoodi--;
+                        MessageBox.Show("متاسرفم اغذاهای امروز به پایان رسریده اسرت لطفا روزدیگری را امتحان کنید");
+
+                    }
+                    else
+                    {
+                        sabadKharid.Add(source[i]);
+                        sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
+                        MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
+                        source[i].Mojoodi--;
+                        for (int j = 0; j < allFood.Count; j++)
+                        {
+                            if (allFood[j].Name.Equals(holdName))
+                                allFood[j].Mojoodi--;
+                        }
                     }
                 }
             }
@@ -304,6 +314,21 @@ namespace project
             tmp.Show();
             HesabNum = tmp.HesabNum;
             Emza = tmp.Emzaa;
+            holdDate.Content = DateTime.Now.Date.ToShortDateString();
+
+            List<Food> holdd = new List<Food>();
+            int sum = 0;
+            for (int i = 0; i < sabadKharid.Count; i++)
+            {
+                holdd[i].Name = sabadKharid[i].Name;
+                holdd[i].Mojoodi = sabadKharid[i].Mojoodi;
+                holdd[i].FinishPrice = sabadKharid[i].FinishPrice;
+                sum += sabadKharid[i].FinishPrice;
+            }
+            factor.ItemsSource = holdd;
+            holdPrice_Copy.Content = sum.ToString();
+            holdHesab.Content = HesabNum.ToString();
+            hold_emza.Content = Emza;
             tabControl.SelectedItem = tab5;
         }
 
@@ -315,6 +340,20 @@ namespace project
         private void Sabt_Click(object sender, RoutedEventArgs e)
         {
             tabControl.SelectedItem = tab3;
+        }
+
+        private void Print_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Controls.PrintDialog Printdlg = new System.Windows.Controls.PrintDialog();
+
+            if ((bool)Printdlg.ShowDialog().GetValueOrDefault())
+            {
+
+                //you can set your own precise size here
+
+                Printdlg.PrintVisual(tab5, "فاکتور");
+
+            }
         }
     }
 }
