@@ -337,7 +337,6 @@ namespace project
             int kharj = 0;
             for (int i = 0; i < sabadKharid.Count; i++)
             {
-                
                 holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * sabadKharid[i].FinishPrice, sabadKharid[i].Mojoodi));
                 sum += sabadKharid[i].Mojoodi * sabadKharid[i].FinishPrice;
                 kharj += sabadKharid[i].Mojoodi * sabadKharid[i].RealPrice;
