@@ -373,5 +373,16 @@ namespace project
 
             }
         }
+
+        private void Hozoori_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ممنون از خرید شما");
+        }
+
+        private void Online_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(" از حساب شما مبلغ"+daramad+" تومان کسر شد" + "\n");
+            MessageBox.Show("ممنون از خرید شما");
+        }
     }
 }

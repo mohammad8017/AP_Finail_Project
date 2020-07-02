@@ -147,6 +147,8 @@
                     <Label x:Name="hold_emza" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,355,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
                     <Label x:Name="holdHesab" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,355,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
                     <Button x:Name="print" Content="چاپ فاکتور" HorizontalAlignment="Left" Height="40" Margin="72.8,395,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Print_Click"/>
+                    <Button x:Name="hozoori" Content="پرداخت حضوری" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,435,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Hozoori_Click"/>
+                    <Button x:Name="online" Content="پرداخت آنلاین" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,435,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Online_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
