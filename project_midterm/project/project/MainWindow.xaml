@@ -110,14 +110,15 @@
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
                     <DataGrid x:Name="dataSabad" HorizontalAlignment="Left" Height="539" Margin="37,25,0,0" VerticalAlignment="Top" Width="466" SelectionUnit="FullRow" ToolTip="یک ستون را انتخاب کنید"/>
-                    <Button x:Name="changeNum" Content="تغییر تعداد" HorizontalAlignment="Left" Height="36" Margin="37,587,0,0" VerticalAlignment="Top" Width="101" FontSize="14" FontWeight="Bold" ToolTip="کلیک کنید" Click="ChangeNum_Click"/>
-                    <Button x:Name="finish" Content="نهایی کردن" HorizontalAlignment="Left" Height="36" Margin="402,587,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Finish_Click"/>
-                    <TextBox x:Name="newNum" HorizontalAlignment="Left" Height="36" Margin="147,587,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111" ToolTip="تعداد را وارد کنید" TextAlignment="Center" BorderBrush="#FFD8DCE8" Foreground="#FFFF8888">
+                    <Button x:Name="changeNum" Content="تغییر تعداد" HorizontalAlignment="Left" Height="36" Margin="37,587,0,0" VerticalAlignment="Top" Width="73" FontSize="14" FontWeight="Bold" ToolTip="کلیک کنید" Click="ChangeNum_Click"/>
+                    <Button x:Name="finish" Content="نهایی کردن" HorizontalAlignment="Left" Height="36" Margin="419,587,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Finish_Click"/>
+                    <TextBox x:Name="newNum" HorizontalAlignment="Left" Height="36" Margin="115,587,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69" ToolTip="تعداد را وارد کنید" TextAlignment="Center" BorderBrush="#FFD8DCE8" Foreground="#FFFF8888">
                         <TextBox.Background>
                             <ImageBrush/>
                         </TextBox.Background>
                     </TextBox>
-                    <Button x:Name="delete" Content="حذف از سبد" HorizontalAlignment="Left" Height="36" Margin="293,587,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Delete_Click"/>
+                    <Button x:Name="delete" Content="حذف از سبد" HorizontalAlignment="Left" Height="36" Margin="327,587,0,0" VerticalAlignment="Top" Width="87" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Delete_Click"/>
+                    <Button x:Name="cancel" Content="لغو سفارش" HorizontalAlignment="Left" Height="36" Margin="235,587,0,0" VerticalAlignment="Top" Width="87" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Cancel_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab5" Header="فاکتور" Margin="-3,0,1.4,-1">
@@ -146,9 +147,10 @@
                     </Label>
                     <Label x:Name="hold_emza" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,355,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
                     <Label x:Name="holdHesab" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,355,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
-                    <Button x:Name="print" Content="چاپ فاکتور" HorizontalAlignment="Left" Height="40" Margin="72.8,395,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Print_Click"/>
+                    <Button x:Name="print" Content="چاپ فاکتور" HorizontalAlignment="Left" Height="40" Margin="72.8,395,0,0" VerticalAlignment="Top" Width="170" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Print_Click"/>
                     <Button x:Name="hozoori" Content="پرداخت حضوری" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,435,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Hozoori_Click"/>
                     <Button x:Name="online" Content="پرداخت آنلاین" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,435,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Online_Click"/>
+                    <Button x:Name="cancel_Copy" Content="لغو سفارش" HorizontalAlignment="Left" Height="41" Margin="242.8,395,0,0" VerticalAlignment="Top" Width="193" ToolTip="کلیک کنید" Click="Cancel_Click" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16"/>
                 </Grid>
             </TabItem>
         </TabControl>

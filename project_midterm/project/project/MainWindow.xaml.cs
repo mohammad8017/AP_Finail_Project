@@ -32,8 +32,9 @@ namespace project
         public string Emza;
         public string HesabNum;
         string[] tarikh = new string[3];
-        public static int daramad;
-        public static int hazine;
+        public static double daramad;
+        public static double hazine;
+        public bool pardakht = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -292,12 +293,21 @@ namespace project
 
                                 //    dataSabad.ItemsSource = sabadKharid;
                                 //    MessageBox.Show($"تعداد تغییر یافت");
-                                //}  
-                                allFood[j].Mojoodi -= int.Parse(newNum.Text);
-                                sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+                                //} 
+                                allFood[j].Mojoodi++;
+                                if(int.Parse(newNum.Text) > allFood[j].Mojoodi)
+                                {
+                                    MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
+                                }
+                                else
+                                {
+                                    allFood[j].Mojoodi -= int.Parse(newNum.Text);
+                                    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
 
-                                dataSabad.ItemsSource = sabadKharid;
-                                MessageBox.Show($"تعداد تغییر یافت");
+                                    dataSabad.ItemsSource = sabadKharid;
+                                    MessageBox.Show($"تعداد تغییر یافت");
+                                }
+                                
                             }     
                         }
                     }
@@ -316,11 +326,20 @@ namespace project
             {
                 if (sabadKharid[i].Name.Equals(holdName))
                 {
+                    
+                    for(int j = 0; j < allFood.Count; j++)
+                    {
+                        if (sabadKharid[i].Name.Equals(allFood[j].Name))
+                        {
+                            allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
+                        }
+                    }
                     sabadKharid.RemoveAt(i);
-                    dataSabad.ItemsSource = sabadKharid;
+                    //dataSabad.ItemsSource = sabadKharid;
                     MessageBox.Show($"غذای انتخابی از سبد حذف شد");
                 }
             }
+            dataSabad.ItemsSource = sabadKharid;
         }
 
         private void Finish_Click(object sender, RoutedEventArgs e)
@@ -381,8 +400,37 @@ namespace project
 
         private void Online_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(" از حساب شما مبلغ"+daramad+" تومان کسر شد" + "\n");
+            pardakht = true;
+            MessageBox.Show(" از حساب شما مبلغ"+ daramad +" تومان کسر شد" + "\n");
             MessageBox.Show("ممنون از خرید شما");
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < sabadKharid.Count; i++)
+            {
+                for (int j = 0; j < allFood.Count; j++)
+                {
+                    if (sabadKharid[i].Name.Equals(allFood[j].Name) && sabadKharid[i].date.Equals(allFood[j].date))
+                    {
+                        allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
+                        sabadKharid.RemoveAt(i);
+                    }
+                }
+            }
+
+            if (pardakht)
+            {
+                MessageBox.Show(" سفارش شما کنسل شد و به حساب شما مبلغ" + daramad*0.9 + " تومان بازگشت و 10 درصد یه عنوان مالیات کم شد" + "\n");
+            }
+            else
+            {
+                MessageBox.Show(" سفارش شما کنسل شد و لطفا" + daramad * 0.1 + " تومان یه عنوان مالیات پرداخت کنید" + "\n");
+            }
+            
+            dataSabad.ItemsSource = sabadKharid;
+            MessageBox.Show("سفارش لغو شد");
+            tabControl.SelectedItem = tab3;
         }
     }
 }
