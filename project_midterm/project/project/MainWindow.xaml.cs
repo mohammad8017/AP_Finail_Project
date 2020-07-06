@@ -344,12 +344,12 @@ namespace project
             holdDate.Content = DateTime.Now.Date.ToShortDateString();
 
             List<FoodFactor> holdd = new List<FoodFactor>(sabadKharid.Count);
-            int sum = 0;
-            int kharj = 0;
+            double sum = 0;
+            double kharj = 0;
             for (int i = 0; i < sabadKharid.Count; i++)
             {
-                holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * sabadKharid[i].FinishPrice, sabadKharid[i].Mojoodi));
-                sum += sabadKharid[i].Mojoodi * sabadKharid[i].FinishPrice;
+                holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24), sabadKharid[i].Mojoodi));
+                sum += sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24);
                 kharj += sabadKharid[i].Mojoodi * sabadKharid[i].RealPrice;
             }
             daramad = sum;
@@ -439,10 +439,21 @@ namespace project
             }
             for(int i = 0; i < allFood.Count; i++)
             {
-                if(allFood[i].Name.Equals(holdName))
-                    MessageBox.Show(allFood[i].PrivateInfo);
+                if (allFood[i].Name.Equals(holdName))
+                {
+                    if (allFood[i].PrivateInfo != "")
+                        MessageBox.Show(allFood[i].PrivateInfo);
+                    else
+                        MessageBox.Show("اطلاعات خاص ثبت نشده");
+                }
+                    
             }
             
+
+        }
+
+        private void DataSabad_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

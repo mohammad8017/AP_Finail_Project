@@ -113,7 +113,7 @@
                                 <ComboBoxItem Content="دسر" FontWeight="Normal" />
                                 <ComboBoxItem Content="نوشیدنی" FontWeight="Normal" />
                             </ComboBox>
-                            
+
                             <TextBlock FontWeight="Bold" Foreground="#FFEA1010">عکس غذا:</TextBlock>
                             <Button x:Name="upBtn"  Content="آپلود" BorderBrush="#FF16152E" Click="Upload_Click" Margin="107,0,95.6,0">
                                 <Button.Background>
@@ -121,7 +121,7 @@
                                 </Button.Background>
                             </Button>
                             <Image x:Name="foodPhoto" HorizontalAlignment="Left" Height="117" VerticalAlignment="Top" Width="172" Stretch="Fill"/>
-                            
+
                             <Button x:Name="saveBtn" Margin="0,20,-0.4,20" Content="ثبت" BorderBrush="#FF16152E" Click="SaveBtn_Click">
                                 <Button.Background>
                                     <ImageBrush/>
@@ -136,7 +136,7 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <GroupBox Header="تغییر تعداد غذا" Margin="10,10,10.4,466.6" Padding="10" Foreground="#FF85C236">
+                    <GroupBox Header="تغییر تعداد غذا" Margin="10,10,10.4,476.6" Padding="10" Foreground="#FF85C236">
                         <StackPanel>
                             <TextBlock FontWeight="Bold" Foreground="#FFEA1010"><Run Text="نام غذا:"/></TextBlock>
                             <TextBox x:Name="FoodName" BorderBrush="White" Foreground="#FFB9AFAF" >
@@ -151,6 +151,82 @@
                                 </TextBox.Background>
                             </TextBox>
                             <Button x:Name="SaveBtn" Margin="0,20,-0.4,20" Content="ثبت" BorderBrush="#FF16152E" Click="Save_Click">
+                                <Button.Background>
+                                    <ImageBrush/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab6" Header="تغییر اطلاعات" FontWeight="Bold">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <GroupBox Header="تغییر اطلاعات غذا" Margin="10,10,10.4,75.6" Padding="10" Foreground="#FF85C236">
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010"><Run Text="نام غذا:"/></TextBlock>
+                            <TextBox x:Name="FoodNameEdit" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010"><Run Text="تاریخ ارائه:"/></TextBlock>
+                            <TextBox x:Name="editDate" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Button x:Name="SearchBtn" Margin="0,20,-0.4,20" Content="جست و جو" BorderBrush="#FF16152E" Click="Search_Click">
+                                <Button.Background>
+                                    <ImageBrush/>
+                                </Button.Background>
+                            </Button>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">قیمت مشتری:</TextBlock>
+                            <TextBox x:Name="foodPriceEdit" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">قیمت مدیر:</TextBlock>
+                            <TextBox x:Name="FoodPriceEdit" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010"> اطلاعات عمومی:</TextBlock>
+                            <TextBox x:Name="foodInfoEdit" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010"> اطلاعات خصوصی:</TextBlock>
+                            <TextBox x:Name="privateInfoEdit" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تعداد موجودی:</TextBlock>
+                            <TextBox x:Name="foodNumEdit" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تاریخ عرضه:</TextBlock>
+                            <TextBox x:Name="foodDateEdit" BorderBrush="White" Foreground="#FFB9AFAF" ToolTip="sample : 6/26/2020" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">دسته غذا:</TextBlock>
+                            <ComboBox x:Name="foodComboEdit" HorizontalAlignment="Left" Height="24"  VerticalAlignment="Top" Width="486" FontWeight="Bold" Foreground="#FFCB3838" Text="-- Select Team --" Margin="0,0,-0.4,0" FontFamily="Tahoma">
+                                <ComboBoxItem x:Name="pizaaEdit" Content="پیتزا" FontWeight="Normal" />
+                                <ComboBoxItem Content="ساندویچ" FontWeight="Normal" />
+                                <ComboBoxItem Content="دسر" FontWeight="Normal" />
+                                <ComboBoxItem Content="نوشیدنی" FontWeight="Normal" />
+                            </ComboBox>
+                            <Button x:Name="Save" Margin="0,20,-0.4,20" Content="ذخیره تغییرات" BorderBrush="#FF16152E" Click="SaveEdit_Click">
                                 <Button.Background>
                                     <ImageBrush/>
                                 </Button.Background>

@@ -200,5 +200,54 @@ namespace project
                 foodPhoto.Source = new BitmapImage(new Uri(op.FileName));
             }
         }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            bool check = false;
+            for(int i = 0; i < foodList.Count; i++)
+            {
+                if (foodList[i].Name.Equals(FoodNameEdit.Text) && foodList[i].date.ToShortDateString().Equals(editDate.Text))
+                {
+                    check = true;
+                    foodPriceEdit.Text = foodList[i].FinishPrice.ToString();
+                    FoodPriceEdit.Text = foodList[i].RealPrice.ToString();
+                    foodInfoEdit.Text = foodList[i].Info.ToString();
+                    privateInfo.Text = foodList[i].PrivateInfo.ToString();
+                    foodNumEdit.Text = foodList[i].Mojoodi.ToString();
+                    foodDateEdit.Text = foodList[i].date.ToShortDateString();
+                }
+            }
+            if (!check)
+                MessageBox.Show("غذایی با این اطلاعات ثبت نشده");
+        }
+
+        private void SaveEdit_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < foodList.Count; i++)
+            {
+                if (FoodNameEdit.Text.Equals(foodList[i].Name))
+                {
+                    foodList[i].FinishPrice = int.Parse(foodPriceEdit.Text);
+                    foodList[i].RealPrice = int.Parse(FoodPriceEdit.Text);
+                    foodList[i].Info = foodInfoEdit.Text;
+                    foodList[i].PrivateInfo = privateInfo.Text;
+                    foodList[i].Mojoodi = int.Parse(foodNumEdit.Text);
+                    foodList[i].date = Convert.ToDateTime(foodDateEdit.Text);
+                    var tmpType = foodComboEdit.SelectedItem.ToString();
+                    var foodType = tmpType.Split(new string[] { "System.Windows.Controls.ComboBoxItem:" }, StringSplitOptions.None);
+                    foodList[i].Type = foodType[1];
+                }
+            }
+            FoodNameEdit.Clear();
+            editDate.Clear();
+            foodPriceEdit.Clear();
+            FoodPriceEdit.Clear();
+            foodInfoEdit.Clear();
+            privateInfoEdit.Clear();
+            foodNumEdit.Clear();
+            foodDateEdit.Clear();
+            foodComboEdit.SelectedIndex = -1;
+            MessageBox.Show("اطلاعات تغییر یافت");
+        }
     }
 }

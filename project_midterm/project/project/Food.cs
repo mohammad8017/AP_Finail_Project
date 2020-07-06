@@ -34,9 +34,9 @@ namespace project
     public class FoodFactor
     {
         public string Name { set; get; }
-        public int FinishPrice { set; get; }
+        public double FinishPrice { set; get; }
         public int Mojoodi { set; get; }
-        public FoodFactor(string Name, int FinishPrice, int Mojoodi)
+        public FoodFactor(string Name, double FinishPrice, int Mojoodi)
         {
             this.Name = Name;
             this.FinishPrice = FinishPrice;
