@@ -29,6 +29,7 @@ namespace project
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
         public List<Food> allFood = new List<Food>();
+        public List<ImageSource> foodPhoto = Modir.foodImage;
         public static string Emza;
         public static string HesabNum;
         public static double daramad;
@@ -422,6 +423,12 @@ namespace project
             dataSabad.ItemsSource = sabadKharid;
             MessageBox.Show("سفارش لغو شد");
             tabControl.SelectedItem = tab3;
+        }
+
+        private void Show_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("");
+
         }
     }
 }

@@ -26,6 +26,7 @@ namespace project
         public List<Food> foodList = new List<Food>();
         public static List<Food> foodTemp = new List<Food>();
         public static ImageSource menuImage;
+        public static List<ImageSource> foodImage = new List<ImageSource>();
         public Modir()
         {
             InitializeComponent();
