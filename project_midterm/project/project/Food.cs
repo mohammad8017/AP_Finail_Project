@@ -15,6 +15,7 @@ namespace project
         public string PrivateInfo { set; get; }
         public int Mojoodi { set; get; }
         public string Type { set; get; }
+        
         public DateTime date;
         public Food() {; }
         public Food(string Name, int FinishPrice, int RealPrice, string Info, string PrivateInfo,string Type, int Mojoodi, int month, int day, int year)

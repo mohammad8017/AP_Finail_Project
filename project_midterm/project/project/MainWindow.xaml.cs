@@ -357,7 +357,7 @@ namespace project
             holdPrice_Copy.Content = sum.ToString();
             holdHesab.Content = HesabNum;
             hold_emza.Content = Emza;
-            //tabControl.SelectedItem = tab5;
+            tabControl.SelectedItem = tab5;
         }
 
         private void Test_Click_1(object sender, RoutedEventArgs e)

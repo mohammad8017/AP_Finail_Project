@@ -133,23 +133,23 @@
                     </Label>
                     <Label x:Name="holdDate" Content="" HorizontalAlignment="Left" Height="33" Margin="242.8,42,0,0" VerticalAlignment="Top" Width="193" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FF020202" FontWeight="Bold" FontSize="16" Background="#FFF4F4F4">
                     </Label>
-                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="280" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
-                    <Label x:Name="holdPrice" Content="جمع کل" HorizontalAlignment="Left" Height="33" Margin="72.8,322,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
+                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="341" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
+                    <Label x:Name="holdPrice" Content="جمع کل" HorizontalAlignment="Left" Height="33" Margin="72.8,383,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
                         <Label.Background>
                             <ImageBrush/>
                         </Label.Background>
                     </Label>
-                    <Label x:Name="holdPrice_Copy" Content="" HorizontalAlignment="Left" Height="33" Margin="141.8,322,0,0" VerticalAlignment="Top" Width="294" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
+                    <Label x:Name="holdPrice_Copy" Content="" HorizontalAlignment="Left" Height="33" Margin="141.8,383,0,0" VerticalAlignment="Top" Width="294" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
                         <Label.Background>
                             <ImageBrush/>
                         </Label.Background>
                     </Label>
-                    <Label x:Name="hold_emza" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,355,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
-                    <Label x:Name="holdHesab" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,355,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
-                    <Button x:Name="print" Content="چاپ فاکتور" HorizontalAlignment="Left" Height="40" Margin="72.8,395,0,0" VerticalAlignment="Top" Width="170" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Print_Click"/>
-                    <Button x:Name="hozoori" Content="پرداخت حضوری" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,435,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Hozoori_Click"/>
-                    <Button x:Name="online" Content="پرداخت آنلاین" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,435,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Online_Click"/>
-                    <Button x:Name="cancel_Copy" Content="لغو سفارش" HorizontalAlignment="Left" Height="41" Margin="242.8,395,0,0" VerticalAlignment="Top" Width="193" ToolTip="کلیک کنید" Click="Cancel_Click" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="hold_emza" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,416,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="holdHesab" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,416,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontSize="16" FontWeight="Bold"/>
+                    <Button x:Name="print" Content="چاپ فاکتور" HorizontalAlignment="Left" Height="40" Margin="72.8,457,0,0" VerticalAlignment="Top" Width="170" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Print_Click"/>
+                    <Button x:Name="hozoori" Content="پرداخت حضوری" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,496,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Hozoori_Click"/>
+                    <Button x:Name="online" Content="پرداخت آنلاین" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,496,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Online_Click"/>
+                    <Button x:Name="cancel_Copy" Content="لغو سفارش" HorizontalAlignment="Left" Height="41" Margin="242.8,456,0,0" VerticalAlignment="Top" Width="193" ToolTip="کلیک کنید" Click="Cancel_Click" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16"/>
                 </Grid>
             </TabItem>
         </TabControl>

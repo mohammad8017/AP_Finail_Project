@@ -18,7 +18,7 @@ namespace project
         public string TypeOfRestaurant { set; get; }
         public string Username { set; get; }
 
-
+        
         public int signInNum = 0;
         public int hazine = 0;
         public int daramad = 0;

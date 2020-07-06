@@ -25,7 +25,7 @@ namespace project
         public bool signIn = false;
         public List<Food> foodList = new List<Food>();
         public static List<Food> foodTemp = new List<Food>();
-        
+        public static ImageSource menuImage;
         public Modir()
         {
             InitializeComponent();
@@ -76,6 +76,7 @@ namespace project
             if (op.ShowDialog() == true)
             {
                 imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
+                menuImage = imgPhoto.Source;
             }
         }
 
@@ -140,6 +141,7 @@ namespace project
             foodCombo.SelectedIndex = -1;
             foodNum.Clear();
             foodDate.Clear();
+            foodPhoto.Source = null;
             MessageBox.Show("ثبت شد");
         }
         
@@ -183,6 +185,19 @@ namespace project
             changePass change = new changePass();
             change.Show();
             change.change(ref Hold);
+        }
+
+        private void Upload_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "تصویر را انتخاب کنید";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
+            {
+                foodPhoto.Source = new BitmapImage(new Uri(op.FileName));
+            }
         }
     }
 }
