@@ -106,7 +106,7 @@
                                     <ImageBrush/>
                                 </TextBox.Background>
                             </TextBox>
-                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تاریخ عرضه:</TextBlock>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">دسته غذا:</TextBlock>
                             <ComboBox x:Name="foodCombo" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="486" FontWeight="Bold" Foreground="#FFCB3838" Text="-- Select Team --" Margin="0,0,-0.4,0" FontFamily="Tahoma">
                                 <ComboBoxItem x:Name="pizaa" Content="پیتزا" FontWeight="Normal" />
                                 <ComboBoxItem Content="ساندویچ" FontWeight="Normal" />

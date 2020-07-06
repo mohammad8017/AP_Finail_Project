@@ -427,7 +427,22 @@ namespace project
 
         private void Show_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("");
+            var tmp = dataSabad.SelectedCells;
+            string holdName = "s";
+            try
+            {
+                holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+            }
+            catch
+            {
+                MessageBox.Show("غذا انتخاب نشده");
+            }
+            for(int i = 0; i < allFood.Count; i++)
+            {
+                if(allFood[i].Name.Equals(holdName))
+                    MessageBox.Show(allFood[i].PrivateInfo);
+            }
+            
 
         }
     }

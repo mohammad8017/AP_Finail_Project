@@ -118,7 +118,7 @@
                         </TextBox.Background>
                     </TextBox>
                     <Button x:Name="delete" Content="حذف از سبد" HorizontalAlignment="Left" Height="36" Margin="330,587,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Delete_Click"/>
-                    <Button x:Name="show" Content="نمایش تصویر" HorizontalAlignment="Left" Height="36" Margin="241,587,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Show_Click"/>
+                    <Button x:Name="show" Content="اطلاعات بیشتر" HorizontalAlignment="Left" Height="36" Margin="241,587,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Show_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab5" Header="فاکتور" Margin="-3,0,1.4,-1">

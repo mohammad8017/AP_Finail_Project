@@ -38,10 +38,10 @@ namespace project
         public int Mojoodi { set; get; }
         public FoodFactor(string Name, int FinishPrice, int Mojoodi)
         {
-
             this.Name = Name;
             this.FinishPrice = FinishPrice;
             this.Mojoodi = Mojoodi;
         }
     }
+    
 }
