@@ -29,9 +29,8 @@ namespace project
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
         public List<Food> allFood = new List<Food>();
-        public string Emza;
-        public string HesabNum;
-        string[] tarikh = new string[3];
+        public static string Emza;
+        public static string HesabNum;
         public static double daramad;
         public static double hazine;
         public bool pardakht = false;
@@ -294,20 +293,12 @@ namespace project
                                 //    dataSabad.ItemsSource = sabadKharid;
                                 //    MessageBox.Show($"تعداد تغییر یافت");
                                 //} 
-                                allFood[j].Mojoodi++;
-                                if(int.Parse(newNum.Text) > allFood[j].Mojoodi)
-                                {
-                                    MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
-                                }
-                                else
-                                {
-                                    allFood[j].Mojoodi -= int.Parse(newNum.Text);
-                                    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+                                allFood[j].Mojoodi -= int.Parse(newNum.Text);
+                                sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
 
-                                    dataSabad.ItemsSource = sabadKharid;
-                                    MessageBox.Show($"تعداد تغییر یافت");
-                                }
-                                
+                                dataSabad.ItemsSource = sabadKharid;
+                                MessageBox.Show($"تعداد تغییر یافت");
+
                             }     
                         }
                     }
@@ -347,8 +338,8 @@ namespace project
             emza tmp = new emza();
             tmp.Show();
 
-            HesabNum = tmp.hesab_text.Text;
-            Emza = tmp.emzaa_text.Text;
+            //HesabNum = tmp.hesab_text.Text;
+            //Emza = tmp.emzaa_text.Text;
             holdDate.Content = DateTime.Now.Date.ToShortDateString();
 
             List<FoodFactor> holdd = new List<FoodFactor>(sabadKharid.Count);
@@ -366,7 +357,7 @@ namespace project
             holdPrice_Copy.Content = sum.ToString();
             holdHesab.Content = HesabNum;
             hold_emza.Content = Emza;
-            tabControl.SelectedItem = tab5;
+            //tabControl.SelectedItem = tab5;
         }
 
         private void Test_Click_1(object sender, RoutedEventArgs e)

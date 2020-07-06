@@ -12,21 +12,20 @@ namespace project
         public int FinishPrice { set; get; }//moshtari
         public int RealPrice { set; get; }
         public string Info { set; get; }
+        public string PrivateInfo { set; get; }
         public int Mojoodi { set; get; }
-        public int[] foodDate;
+        public string Type { set; get; }
         public DateTime date;
         public Food() {; }
-        public Food(string Name, int FinishPrice, int RealPrice, string Info, int Mojoodi, int month, int day, int year)
+        public Food(string Name, int FinishPrice, int RealPrice, string Info, string PrivateInfo,string Type, int Mojoodi, int month, int day, int year)
         {
             this.Name = Name;
             this.FinishPrice = FinishPrice;
             this.RealPrice = RealPrice;
             this.Info = Info;
+            this.PrivateInfo = PrivateInfo;
+            this.Type = Type;
             this.Mojoodi=Mojoodi;
-            foodDate = new int[3];
-            foodDate[1] = day;
-            foodDate[0] = month;
-            foodDate[2] = year;
             date = new DateTime(year, month, day);
         }
         

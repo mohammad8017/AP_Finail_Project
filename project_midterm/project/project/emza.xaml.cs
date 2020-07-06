@@ -29,15 +29,10 @@ namespace project
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Emzaa = emzaa_text.Text;
-            try
-            {
-                HesabNum = hesab_text.Text;
-                this.Close();
-            }
-            catch
-            {
-                MessageBox.Show("فرمت شماره حساب نا درست است");
-            }
+            HesabNum = hesab_text.Text;
+            MainWindow.HesabNum = this.HesabNum;
+            MainWindow.Emza = Emzaa;
+            this.Close();
             
         }
 

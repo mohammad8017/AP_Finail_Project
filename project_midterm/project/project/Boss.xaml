@@ -52,7 +52,7 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <GroupBox Margin="10,10,10.4,312.6" Padding="10">
+                    <GroupBox Margin="10,10,10.4,226.6" Padding="10">
                         <GroupBox.Header>
                             <StackPanel Orientation="Horizontal">
 
@@ -78,8 +78,14 @@
                                     <ImageBrush/>
                                 </TextBox.Background>
                             </TextBox>
-                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">اطلاعات:</TextBlock>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010"> اطلاعات عمومی:</TextBlock>
                             <TextBox x:Name="foodInfo" BorderBrush="White" Foreground="#FFB9AFAF" >
+                                <TextBox.Background>
+                                    <ImageBrush/>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010"> اطلاعات خصوصی:</TextBlock>
+                            <TextBox x:Name="privateInfo" BorderBrush="White" Foreground="#FFB9AFAF" >
                                 <TextBox.Background>
                                     <ImageBrush/>
                                 </TextBox.Background>
@@ -91,11 +97,18 @@
                                 </TextBox.Background>
                             </TextBox>
                             <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تاریخ عرضه:</TextBlock>
-                            <TextBox x:Name="foodDate" BorderBrush="White" Foreground="#FFB9AFAF" ToolTip="sample : 26/6/2020" >
+                            <TextBox x:Name="foodDate" BorderBrush="White" Foreground="#FFB9AFAF" ToolTip="sample : 6/26/2020" >
                                 <TextBox.Background>
                                     <ImageBrush/>
                                 </TextBox.Background>
                             </TextBox>
+                            <TextBlock FontWeight="Bold" Foreground="#FFEA1010">تاریخ عرضه:</TextBlock>
+                            <ComboBox x:Name="foodCombo" HorizontalAlignment="Left" Height="30"  VerticalAlignment="Top" Width="486" FontWeight="Bold" Foreground="#FFCB3838" Text="-- Select Team --" Margin="0,0,-0.4,0" FontFamily="Tahoma">
+                                <ComboBoxItem x:Name="pizaa" Content="پیتزا" FontWeight="Normal" />
+                                <ComboBoxItem Content="ساندویچ" FontWeight="Normal" />
+                                <ComboBoxItem Content="دسر" FontWeight="Normal" />
+                                <ComboBoxItem Content="نوشیدنی" FontWeight="Normal" />
+                            </ComboBox>
                             <Button x:Name="saveBtn" Margin="0,20,-0.4,20" Content="ثبت" BorderBrush="#FF16152E" Click="SaveBtn_Click">
                                 <Button.Background>
                                     <ImageBrush/>
@@ -103,7 +116,7 @@
                             </Button>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Header="تغییر تعداد غذا" Margin="10,365,10.4,84.6" Padding="10" Foreground="#FF85C236">
+                    <GroupBox Header="تغییر تعداد غذا" Margin="10,432,10.4,44.6" Padding="10" Foreground="#FF85C236">
                         <StackPanel>
                             <TextBlock FontWeight="Bold" Foreground="#FFEA1010">نام غذا:</TextBlock>
                             <TextBox x:Name="FoodName" BorderBrush="White" Foreground="#FFB9AFAF" >

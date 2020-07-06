@@ -126,15 +126,18 @@ namespace project
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            var mtp = foodDate.Text.Split('/');
-            
+            var mtp = foodDate.Text.Split('/'); //System.Windows.Controls.ComboBoxItem:
+            var tmpType = foodCombo.SelectedItem.ToString();
+            var foodType= tmpType.Split(new string[] { "System.Windows.Controls.ComboBoxItem:" }, StringSplitOptions.None);
             //foodList.Add(new Food("pizza", 12000, 3000, "morgh", 23, 7, 1, 2020));
-            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, int.Parse(foodNum.Text), int.Parse(mtp[0]), int.Parse(mtp[1]), int.Parse(mtp[2])));
+            foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, privateInfo.Text, foodType[1], int.Parse(foodNum.Text), int.Parse(mtp[0]), int.Parse(mtp[1]), int.Parse(mtp[2])));
             foodTemp = foodList;
             foodname.Clear();
             foodPrice.Clear();
             FoodPrice.Clear();
             foodInfo.Clear();
+            privateInfo.Clear();
+            foodCombo.SelectedIndex = -1;
             foodNum.Clear();
             foodDate.Clear();
             MessageBox.Show("ثبت شد");
