@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("menu.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("admindata.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("admindata_log.ldf")]
 
 

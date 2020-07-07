@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace project
 {
@@ -22,6 +24,7 @@ namespace project
     {
         public List<boss> bosses = new List<boss>();
         bool first = false;//avalin bar faqat etelaate file ro mikhoone
+        
         public statUp()
         {
             InitializeComponent();
@@ -35,6 +38,18 @@ namespace project
                     bosses.Add(new boss(holdInfo[0], holdInfo[1], int.Parse(holdInfo[2]), holdInfo[3], holdInfo[4], int.Parse(holdInfo[5]), holdInfo[6]));
 
                 }
+
+                //SqlConnection connect = new SqlConnection(@"F:\AP\final_project\AP_Finail_Project\project_midterm\project\AdminInfo.Table");
+                //SqlCommand command = new SqlCommand();
+                //SqlDataAdapter adapter = new SqlDataAdapter();
+                //connect.Open();
+                //command.
+                //bosses.Add(new boss())
+                
+
+
+
+
                 first = true;
             }
             
