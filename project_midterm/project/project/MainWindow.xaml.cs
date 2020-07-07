@@ -43,13 +43,13 @@ namespace project
             d = DateTime.Now;
             label1.Content = d.Hour + " : " + d.Minute + " : " + d.Second;
 
-
+            txtAuto.TextChanged += new TextChangedEventHandler(txtAuto_TextChanged);
             //statUp nnn = new statUp();
-            
+
             //source.Add(new Food("pizza", 12000, 3000, "morgh", 23, 6, 30, 2020));
             //dataGrid.ItemsSource = source;
 
-            
+
             //dataGrid.ItemsSource = nnn.bosses;
 
             //Signup_window window = new Signup_window();
@@ -455,6 +455,52 @@ namespace project
         private void DataSabad_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void txtAuto_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string typedString = txtAuto.Text;
+            List<string> autoList = new List<string>();
+            autoList.Clear();
+            foreach(var item in allFood)
+            {
+                if (!string.IsNullOrEmpty(txtAuto.Text))
+                {
+                    if (item.Name.StartsWith(typedString))
+                    {
+                        autoList.Add(item.Name);
+                    }
+                }
+            }
+            if (autoList.Count > 0)
+            {
+                suggestion.ItemsSource = autoList;
+                suggestion.Visibility = Visibility.Visible;
+            }
+            else if (txtAuto.Text.Equals(""))
+            {
+                suggestion.Visibility = Visibility.Collapsed;
+                suggestion.ItemsSource = null;
+            }
+            else
+            {
+                suggestion.Visibility = Visibility.Collapsed;
+                suggestion.ItemsSource = null;
+            }
+        }
+
+        private void suggestion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (suggestion.ItemsSource != null)
+            {
+                suggestion.Visibility = Visibility.Collapsed;
+                txtAuto.TextChanged -= new TextChangedEventHandler(txtAuto_TextChanged);
+                if (suggestion.SelectedIndex != -1)
+                {
+                    txtAuto.Text = suggestion.SelectedItem.ToString();
+                }
+                txtAuto.TextChanged += new TextChangedEventHandler(txtAuto_TextChanged);
+            }
         }
     }
 }

@@ -37,3 +37,6 @@ F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeUsername.baml
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\emza.g.cs
 F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\emza.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\AdminData.mdf
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\AdminData_log.ldf
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_Content.g.cs

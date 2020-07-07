@@ -30,25 +30,34 @@ namespace project
             InitializeComponent();
             if (!first)
             {
-                StreamReader readInfo = new StreamReader(@"F:\AP\final_project\AP_Finail_Project\project_midterm\project\boss_information.txt");
-                readInfo.ReadLine();
-                for (int i = 0; readInfo.EndOfStream == false; i++)
+                //StreamReader readInfo = new StreamReader(@"F:\AP\final_project\AP_Finail_Project\project_midterm\project\boss_information.txt");
+                //readInfo.ReadLine();
+                //for (int i = 0; readInfo.EndOfStream == false; i++)
+                //{
+                //    var holdInfo = readInfo.ReadLine().Split(',');
+                //    bosses.Add(new boss(holdInfo[0], holdInfo[1], int.Parse(holdInfo[2]), holdInfo[3], holdInfo[4], int.Parse(holdInfo[5]), holdInfo[6]));
+
+                //}
+                //readInfo.Close();
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\AdminData.mdf;Integrated Security=True";
+                SqlConnection Connection = new SqlConnection(connectionString);
+                Connection.Open();
+                SqlCommand Command = new SqlCommand("SELECT * FROM [Table]", Connection);
+                SqlDataReader sqlDataReader = Command.ExecuteReader();
+                while (sqlDataReader.Read())
                 {
-                    var holdInfo = readInfo.ReadLine().Split(',');
-                    bosses.Add(new boss(holdInfo[0], holdInfo[1], int.Parse(holdInfo[2]), holdInfo[3], holdInfo[4], int.Parse(holdInfo[5]), holdInfo[6]));
-
+                    string name = sqlDataReader.GetValue(2).ToString();
+                    string family = sqlDataReader.GetValue(3).ToString();
+                    int code = (int)sqlDataReader.GetValue(0);
+                    string pass = sqlDataReader.GetValue(1).ToString();
+                    string address = sqlDataReader.GetValue(5).ToString();
+                    int region = (int)sqlDataReader.GetValue(4);
+                    string type = sqlDataReader.GetValue(6).ToString();
+                    bosses.Add(new boss(name, family, code, pass, address, region, type));
                 }
-
-                //SqlConnection connect = new SqlConnection(@"F:\AP\final_project\AP_Finail_Project\project_midterm\project\AdminInfo.Table");
-                //SqlCommand command = new SqlCommand();
-                //SqlDataAdapter adapter = new SqlDataAdapter();
-                //connect.Open();
-                //command.
-                //bosses.Add(new boss())
-                
-
-
-
+                sqlDataReader.Close();
+                Command.Dispose();
+                Connection.Close();
 
                 first = true;
             }

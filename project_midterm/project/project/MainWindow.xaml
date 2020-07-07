@@ -104,6 +104,16 @@
                     <Button x:Name="test" Content="کلیک کنید" HorizontalAlignment="Left" Height="19" Margin="10,191,0,0" VerticalAlignment="Top" Width="111" Click="Test_Click" FontWeight="Bold" ToolTip="برای نمایش غذا ها کلیک کنید"/>
                 </Grid>
             </TabItem>
+            <TabItem x:Name="tab6" Header="جست وجو">
+                <Grid x:Name="txt33" RenderTransformOrigin="0.546,0.459">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <TextBox x:Name="txtAuto" HorizontalAlignment="Left" Height="33" Margin="115,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="276" TextChanged="txtAuto_TextChanged"/>
+                    <ListBox x:Name="suggestion" HorizontalAlignment="Left" Height="30" Margin="115,94,0,0" VerticalAlignment="Top" Width="276" SelectionChanged="suggestion_SelectionChanged"/>
+
+                </Grid>
+            </TabItem>
             <TabItem x:Name="tab4" Header="سبد خرید" Margin="-3.6,0,3,0">
                 <Grid x:Name="txt233" RenderTransformOrigin="0.546,0.459">
                     <Grid.ColumnDefinitions>
