@@ -130,7 +130,7 @@
                     </Grid.Background>
                     <DataGrid x:Name="dataSabad" HorizontalAlignment="Left" Height="539" Margin="37,25,0,0" VerticalAlignment="Top" Width="466" SelectionUnit="FullRow" ToolTip="یک ستون را انتخاب کنید" Grid.ColumnSpan="2" SelectionChanged="DataSabad_SelectionChanged"/>
                     <Button x:Name="changeNum" Content="تغییر تعداد" HorizontalAlignment="Left" Height="36" Margin="37,587,0,0" VerticalAlignment="Top" Width="84" FontSize="14" FontWeight="Bold" ToolTip="کلیک کنید" Click="ChangeNum_Click"/>
-                    <Button x:Name="finish" Content="نهایی کردن" HorizontalAlignment="Left" Height="36" Margin="208.4,587,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Finish_Click" Grid.Column="1"/>
+                    <Button x:Name="finish" Content="نهایی کردن" HorizontalAlignment="Left" Margin="208.6,587,0,20.2" Width="84" FontWeight="Bold" FontSize="14" ToolTip="کلیک کنید" Click="Finish_Click" Grid.Column="1"/>
                     <TextBox x:Name="newNum" HorizontalAlignment="Left" Height="36" Margin="131,587,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69" ToolTip="تعداد را وارد کنید" TextAlignment="Center" BorderBrush="#FFD8DCE8" Foreground="#FFFF8888">
                         <TextBox.Background>
                             <ImageBrush/>
@@ -153,7 +153,7 @@
                     </Label>
                     <Label x:Name="holdDate" Content="" HorizontalAlignment="Left" Height="33" Margin="242.8,42,0,0" VerticalAlignment="Top" Width="193" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FF020202" FontWeight="Bold" FontSize="16" Background="#FFF4F4F4">
                     </Label>
-                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="341" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
+                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="341" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma" SelectionChanged="factor_SelectionChanged"/>
                     <Label x:Name="holdPrice" Content="جمع کل" HorizontalAlignment="Left" Height="33" Margin="72.8,383,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
                         <Label.Background>
                             <ImageBrush/>

@@ -26,6 +26,7 @@ namespace project
         public bool signIn = false;
         //public Customer customer;
         public Customer Hold = new Customer();
+        //public List<Customer> Customers = new List<Customer>();
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
         public List<Food> allFood = Modir.foodTemp;
@@ -36,6 +37,7 @@ namespace project
         public static double daramad;
         public static double hazine;
         public bool pardakht = false;
+        public int NumOfSaf;
         public MainWindow()
         {
             InitializeComponent();
@@ -77,6 +79,7 @@ namespace project
                     Hold.Email = Signup_window.customer[i].Email;
                     Hold.Pass = Signup_window.customer[i].Pass;
                     holdName.Content = Hold.Name + " " + Hold.Family;
+                    NumOfSaf = i;
                 }  
             }
             if (check)
@@ -345,6 +348,8 @@ namespace project
             holdDate.Content = DateTime.Now.Date.ToShortDateString();
 
             List<FoodFactor> holdd = new List<FoodFactor>(sabadKharid.Count);
+            List<string> holdname = new List<string>();
+            List<double> holdprice = new List<double>();
             double sum = 0;
             double kharj = 0;
             for (int i = 0; i < sabadKharid.Count; i++)
@@ -352,13 +357,18 @@ namespace project
                 holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24), sabadKharid[i].Mojoodi));
                 sum += sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24);
                 kharj += sabadKharid[i].Mojoodi * sabadKharid[i].RealPrice;
+                holdname.Add(sabadKharid[i].Name);
+                holdprice.Add(sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24));
             }
+
+            Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum, "code takhfif"));//code takhfif va gheymate ba takhfif hesab nashode
             daramad = sum;
             hazine = kharj;
             factor.ItemsSource = holdd;
             holdPrice_Copy.Content = sum.ToString();
             holdHesab.Content = HesabNum;
             hold_emza.Content = Emza;
+            
             tabControl.SelectedItem = tab5;
         }
 
@@ -396,6 +406,7 @@ namespace project
             pardakht = true;
             MessageBox.Show(" از حساب شما مبلغ"+ daramad +" تومان کسر شد" + "\n");
             MessageBox.Show("ممنون از خرید شما");
+            
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -408,6 +419,7 @@ namespace project
                     {
                         allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
                         sabadKharid.RemoveAt(i);
+                        Signup_window.customer.RemoveAt(Signup_window.customer.Count - 1);
                     }
                 }
             }

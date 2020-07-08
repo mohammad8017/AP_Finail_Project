@@ -31,7 +31,7 @@ namespace project
         }
         
     }
-    public class FoodFactor
+    public class FoodFactor //for show factor in datagrid
     {
         public string Name { set; get; }
         public double FinishPrice { set; get; }
@@ -43,5 +43,20 @@ namespace project
             this.Mojoodi = Mojoodi;
         }
     }
-    
+    public class FactorList
+    {
+        public List<string> Names = new List<string>();
+        public List<double> Prices = new List<double>();
+        public double AllPrice;
+        public double AllPriceOff;
+        public string CodeOff;
+        public FactorList(List<string> name, List<double> price, double allPrice, double allPriceOff, string code)
+        {
+            Names = name;
+            Prices = price;
+            AllPrice = allPrice;
+            AllPriceOff = allPriceOff;
+            CodeOff = code;
+        }
+    }
 }

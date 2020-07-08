@@ -10,13 +10,14 @@ namespace project
     public class Customer
     {
         public List<Customer> customer = new List<Customer>();
+        public List<FactorList> factors = new List<FactorList>();
         public string Name { set; get; }
         public string Family { set; get; }
         public double PhoneNum { set; get; }
         public string Email { set; get; }
         public string NationalCode { set; get; }
         public string Pass { set; get; }
-        
+        public int NumSignIn = 0;
 
         public Customer() {; }
         public Customer(string name, string family, double phoneNum, string email, string nationalCode, string pass)
