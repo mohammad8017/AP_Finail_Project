@@ -153,7 +153,7 @@
                     </Label>
                     <Label x:Name="holdDate" Content="" HorizontalAlignment="Left" Height="33" Margin="242.8,42,0,0" VerticalAlignment="Top" Width="193" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FF020202" FontWeight="Bold" FontSize="16" Background="#FFF4F4F4">
                     </Label>
-                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="341" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma" SelectionChanged="factor_SelectionChanged"/>
+                    <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="341" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
                     <Label x:Name="holdPrice" Content="جمع کل" HorizontalAlignment="Left" Height="33" Margin="72.8,383,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
                         <Label.Background>
                             <ImageBrush/>
@@ -170,6 +170,19 @@
                     <Button x:Name="hozoori" Content="پرداخت حضوری" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,496,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Hozoori_Click"/>
                     <Button x:Name="online" Content="پرداخت آنلاین" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,496,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Online_Click"/>
                     <Button x:Name="cancel_Copy" Content="لغو سفارش" HorizontalAlignment="Left" Height="41" Margin="242.8,456,0,0" VerticalAlignment="Top" Width="193" ToolTip="کلیک کنید" Click="Cancel_Click" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab7" Header="نمایش فاکتورها">
+                <Grid x:Name="txt333" RenderTransformOrigin="0.546,0.459">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <Button x:Name="showFactor" Content="برای نمایش فاکتورها کلیک کنید" HorizontalAlignment="Left" Height="39" Margin="32,43,0,0" VerticalAlignment="Top" Width="477" FontSize="16" FontWeight="Bold" BorderBrush="#FFFDF8F8" Click="showFactor_Click">
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                    </Button>
+                    <DataGrid x:Name="showFactorGrid" HorizontalAlignment="Left" Height="514" Margin="32,101,0,0" VerticalAlignment="Top" Width="477"/>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -72,14 +72,15 @@ namespace project
                     check = true;
                     signIn = true;
                     //Hold = Signup_window.customer[i];
-                    Hold.Name = Signup_window.customer[i].Name;
-                    Hold.Family = Signup_window.customer[i].Family;
-                    Hold.PhoneNum = Signup_window.customer[i].PhoneNum;
-                    Hold.NationalCode = Signup_window.customer[i].NationalCode;
-                    Hold.Email = Signup_window.customer[i].Email;
-                    Hold.Pass = Signup_window.customer[i].Pass;
-                    holdName.Content = Hold.Name + " " + Hold.Family;
+                    //Hold.Name = Signup_window.customer[i].Name;
+                    //Hold.Family = Signup_window.customer[i].Family;
+                    //Hold.PhoneNum = Signup_window.customer[i].PhoneNum;
+                    //Hold.NationalCode = Signup_window.customer[i].NationalCode;
+                    //Hold.Email = Signup_window.customer[i].Email;
+                    //Hold.Pass = Signup_window.customer[i].Pass;
+                    //holdName.Content = Hold.Name + " " + Hold.Family;
                     NumOfSaf = i;
+                    Hold = Signup_window.customer[i];
                 }  
             }
             if (check)
@@ -548,6 +549,27 @@ namespace project
             txtAuto.Clear();
             MessageBox.Show("به سبد خرید اضافه شد");
             dataSabad.ItemsSource = sabadKharid;
+        }
+
+        private void showFactor_Click(object sender, RoutedEventArgs e)
+        {
+            List<ShowFactor> show = new List<ShowFactor>();
+            for(int i = 0; i < Hold.factors.Count; i++)
+            {
+                string tmp = "foods: ";
+                for(int j = 0; j < Hold.factors[i].Names.Count; j++)
+                {
+                    if (j != Hold.factors[i].Names.Count - 1)
+                        tmp += Hold.factors[i].Names[j] + ", " + Hold.factors[i].Prices[j] + " | ";
+                }
+                //tmp += "// price of all with out OFF: " + Hold.factors[i].AllPrice + "// price of all with OFF: " + Hold.factors[i].AllPriceOff;
+                //show.Add(Hold.factors[i].Names[j]);
+                show.Add(new ShowFactor(tmp, Hold.factors[i].AllPrice, Hold.factors[i].AllPriceOff));
+            }
+            if (Hold.factors.Count > 0)
+                showFactorGrid.ItemsSource = show;
+            else
+                MessageBox.Show("شما تا کنون خریدی نداشتید");
         }
     }
 }

@@ -59,4 +59,16 @@ namespace project
             CodeOff = code;
         }
     }
+    public class ShowFactor
+    {
+        public string Name_price { set; get; }
+        public double AllPrice { set; get; }
+        public double AllPriceOff { set; get; }
+        public ShowFactor(string name,double price, double off)
+        {
+            Name_price = name;
+            AllPrice = price;
+            AllPriceOff = off;
+        }
+    }
 }
