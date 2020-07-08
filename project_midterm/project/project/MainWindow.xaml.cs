@@ -48,7 +48,10 @@ namespace project
 
             txtAuto.TextChanged += new TextChangedEventHandler(txtAuto_TextChanged);
             //statUp nnn = new statUp();
-
+            caledar.DisplayDateStart = DateTime.Today;
+            int month = DateTime.Now.Month;
+            int day = DateTime.Today.Day;
+            caledar.DisplayDateEnd = new DateTime(2020, month + 1, day);
             //source.Add(new Food("pizza", 12000, 3000, "morgh", 23, 6, 30, 2020));
             //dataGrid.ItemsSource = source;
 
@@ -106,9 +109,19 @@ namespace project
         private void Btn4_Click(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("");
-            Signup_window sign_up = new Signup_window();
-            sign_up.Show();
-            
+            bool signIn = false;
+            for(int i = 0; i < statUp.bosses.Count; i++)
+            {
+                if (statUp.bosses[i].signInNum > 0)
+                    signIn = true;
+            }
+            if (!signIn)
+                MessageBox.Show("هیچ ادمینی تا الآن وارد نشده");
+            else
+            {
+                Signup_window sign_up = new Signup_window();
+                sign_up.Show();
+            }
         }
 
 
@@ -561,6 +574,8 @@ namespace project
                 {
                     if (j != Hold.factors[i].Names.Count - 1)
                         tmp += Hold.factors[i].Names[j] + ", " + Hold.factors[i].Prices[j] + " | ";
+                    else
+                        tmp += Hold.factors[i].Names[j] + ", " + Hold.factors[i].Prices[j];
                 }
                 //tmp += "// price of all with out OFF: " + Hold.factors[i].AllPrice + "// price of all with OFF: " + Hold.factors[i].AllPriceOff;
                 //show.Add(Hold.factors[i].Names[j]);

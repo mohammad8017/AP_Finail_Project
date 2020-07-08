@@ -22,7 +22,7 @@ namespace project
     /// </summary>
     public partial class statUp : Window
     {
-        public List<boss> bosses = new List<boss>();
+        public static List<boss> bosses = new List<boss>();
         bool first = false;//avalin bar faqat etelaate file ro mikhoone
         
         public statUp()

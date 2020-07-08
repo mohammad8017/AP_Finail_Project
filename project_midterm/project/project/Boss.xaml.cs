@@ -25,6 +25,7 @@ namespace project
         public bool signIn = false;
         public List<Food> foodList = new List<Food>();
         public static List<Food> foodTemp = new List<Food>();
+        public static List<boss> listOfBoss = new List<boss>();
         public static ImageSource menuImage;
         public static List<ImageSource> foodImage = new List<ImageSource>();
         public Modir()
@@ -50,14 +51,15 @@ namespace project
         {
             bool check = false;
             statUp t = new statUp();
-            for(int i = 0; i < t.bosses.Count; i++)
+            for(int i = 0; i < statUp.bosses.Count; i++)
             {
-                if (int.Parse(codeText.Text) == t.bosses[i].Code && passText.Text == t.bosses[i].Pass)
+                if (int.Parse(codeText.Text) == statUp.bosses[i].Code && passText.Text == statUp.bosses[i].Pass)
                 {
-                    Hold = t.bosses[i];
+                    Hold = statUp.bosses[i];
                     signIn = true;
                     check = true;
-                    Hold.signInNum++;
+                    statUp.bosses[i].signInNum++;
+                    //Hold.signInNum++;
                 }
                     
             }
