@@ -28,7 +28,8 @@ namespace project
         public Customer Hold = new Customer();
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
-        public List<Food> allFood = new List<Food>();
+        public List<Food> allFood = Modir.foodTemp;
+        //public List<Food> allFood2 = Modir.foodTemp;
         public List<ImageSource> foodPhoto = Modir.foodImage;
         public static string Emza;
         public static string HesabNum;
@@ -213,7 +214,7 @@ namespace project
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            allFood = Modir.foodTemp;
+            
             for (int i = 0; i < allFood.Count; i++)
             {
                 var temp = caledar.SelectedDate.Value.Date.ToShortDateString();
@@ -462,31 +463,42 @@ namespace project
             string typedString = txtAuto.Text;
             List<string> autoList = new List<string>();
             autoList.Clear();
+
             foreach(var item in allFood)
             {
                 if (!string.IsNullOrEmpty(txtAuto.Text))
                 {
-                    if (item.Name.StartsWith(typedString))
+                    if (item.Name.Contains(typedString))
                     {
                         autoList.Add(item.Name);
                     }
+                    else if (item.Info.Contains(typedString))
+                    {
+                        autoList.Add(item.Info);
+                    }
+                    else if (item.FinishPrice.ToString().Contains(typedString))
+                    {
+                        autoList.Add(item.FinishPrice.ToString());
+                    }
+                    else {; }
                 }
             }
-            if (autoList.Count > 0)
-            {
-                suggestion.ItemsSource = autoList;
-                suggestion.Visibility = Visibility.Visible;
-            }
-            else if (txtAuto.Text.Equals(""))
-            {
-                suggestion.Visibility = Visibility.Collapsed;
-                suggestion.ItemsSource = null;
-            }
-            else
-            {
-                suggestion.Visibility = Visibility.Collapsed;
-                suggestion.ItemsSource = null;
-            }
+            suggestion.ItemsSource = autoList;
+            //if (autoList.Count > 0)
+            //{
+            //    suggestion.ItemsSource = autoList;
+            //    suggestion.Visibility = Visibility.Visible;
+            //}
+            //else //if (txtAuto.Text.Equals(""))
+            //{
+            //    suggestion.Visibility = Visibility.Collapsed;
+            //    suggestion.ItemsSource = null;
+            //}
+            //else
+            //{
+            //    suggestion.Visibility = Visibility.Collapsed;
+            //    suggestion.ItemsSource = null;
+            //}
         }
 
         private void suggestion_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -497,10 +509,33 @@ namespace project
                 txtAuto.TextChanged -= new TextChangedEventHandler(txtAuto_TextChanged);
                 if (suggestion.SelectedIndex != -1)
                 {
-                    txtAuto.Text = suggestion.SelectedItem.ToString();
+                    string tmp = suggestion.SelectedItem.ToString();
+                    for(int i = 0; i < allFood.Count; i++)
+                    {
+                        if(tmp.Equals(allFood[i].Name) || tmp.Equals(allFood[i].Info) || tmp.Equals(allFood[i].FinishPrice.ToString()))
+                        {
+                            txtAuto.Text = allFood[i].Name;
+                        }
+                    }
+                    //txtAuto.Text = suggestion.SelectedItem.ToString();
                 }
                 txtAuto.TextChanged += new TextChangedEventHandler(txtAuto_TextChanged);
             }
+        }
+
+        private void saveSearch_Click(object sender, RoutedEventArgs e)
+        {
+            for(int i = 0; i < allFood.Count; i++)
+            {
+                if (txtAuto.Text.Equals(allFood[i].Name))
+                {
+                    sabadKharid.Add(allFood[i]);
+                    sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
+                }
+            }
+            txtAuto.Clear();
+            MessageBox.Show("به سبد خرید اضافه شد");
+            dataSabad.ItemsSource = sabadKharid;
         }
     }
 }

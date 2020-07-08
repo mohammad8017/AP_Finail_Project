@@ -109,9 +109,14 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <TextBox x:Name="txtAuto" HorizontalAlignment="Left" Height="33" Margin="115,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="276" TextChanged="txtAuto_TextChanged"/>
-                    <ListBox x:Name="suggestion" HorizontalAlignment="Left" Height="30" Margin="115,94,0,0" VerticalAlignment="Top" Width="276" SelectionChanged="suggestion_SelectionChanged"/>
-
+                    <TextBox x:Name="txtAuto" HorizontalAlignment="Left" Height="33" Margin="160,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextChanged="txtAuto_TextChanged" FontSize="16" FontFamily="Tahoma" FontWeight="Bold" BorderBrush="#FFFF3737" Background="#FFDCCFCF"/>
+                    <ListBox x:Name="suggestion" Height="30" Margin="0,55,102.4,0" VerticalAlignment="Top" Width="276" SelectionChanged="suggestion_SelectionChanged" HorizontalAlignment="Right" BorderBrush="#FF030303" Background="#FFC76060" FontSize="14" FontFamily="Tahoma" />
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="21,24,0,0" TextWrapping="Wrap" Text="نام را وارد کنید" VerticalAlignment="Top" Width="134" FontWeight="Bold" FontFamily="Tahoma" FontSize="16" TextAlignment="Center"/>
+                    <Button x:Name="saveSearch" Content="برای ثبت غذا کلیک کنید" HorizontalAlignment="Left" Height="37" Margin="38,111,0,0" VerticalAlignment="Top" Width="461" BorderBrush="#FFF9F4F4" FontSize="17" FontWeight="Bold" Click="saveSearch_Click">
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                    </Button>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab4" Header="سبد خرید" Margin="-3.6,0,3,0">
