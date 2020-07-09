@@ -66,9 +66,21 @@ namespace project
 
         private void Customer_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow customer = new MainWindow();
-            customer.Show();
-            this.Close();
+            bool signIn = false;
+            for (int i = 0; i < bosses.Count; i++)
+            {
+                if (bosses[i].signInNum > 0)
+                    signIn = true;
+            }
+            if (!signIn)
+                MessageBox.Show("هیچ ادمینی تا الآن وارد نشده");
+            else
+            {
+                MainWindow customer = new MainWindow();
+                customer.Show();
+                this.Close();
+            }
+            
         }
 
         private void Boss_Click(object sender, RoutedEventArgs e)

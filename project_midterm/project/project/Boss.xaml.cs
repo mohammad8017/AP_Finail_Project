@@ -31,6 +31,7 @@ namespace project
         public Modir()
         {
             InitializeComponent();
+            
         }
 
         private void Name_change_Click(object sender, RoutedEventArgs e)

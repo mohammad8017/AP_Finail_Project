@@ -252,7 +252,6 @@ namespace project
         {
             
             var tmp = dataGrid.SelectedCells;
-            //MessageBox.Show((tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text);
             var holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
             for(int i = 0; i < source.Count; i++)
             {
@@ -268,17 +267,11 @@ namespace project
                         sabadKharid.Add(source[i]);
                         sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
                         MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
-                        //source[i].Mojoodi--;
-                        //for (int j = 0; j < allFood.Count; j++)
-                        //{
-                        //    if (allFood[j].Name.Equals(holdName))
-                        //        allFood[j].Mojoodi--;
-                        //}
                     }
                 }
             }
             dataSabad.ItemsSource = sabadKharid;
-            //if(int.Parse(tmp[tmp.Count-1].ToString))
+            
         }
 
         private void ChangeNum_Click(object sender, RoutedEventArgs e)
@@ -305,26 +298,12 @@ namespace project
                         {
                             if (allFood[j].Name.Equals(holdName))
                             {
-                                //MessageBox.Show("2");
-                                //allFood[j].Mojoodi += sabadKharid[i].Mojoodi;
-                                //if(int.Parse(newNum.Text) > allFood[j].Mojoodi)
-                                //{
-                                //    MessageBox.Show("مقدار انتخابی بیشتر از مقدار موجود است");
-                                //}
-                                //else
-                                //{
-                                //    allFood[j].Mojoodi -= int.Parse(newNum.Text);
-                                //    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
-
-                                //    dataSabad.ItemsSource = sabadKharid;
-                                //    MessageBox.Show($"تعداد تغییر یافت");
-                                //} 
                                 allFood[j].Mojoodi -= int.Parse(newNum.Text);
                                 sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
 
                                 dataSabad.ItemsSource = sabadKharid;
                                 MessageBox.Show($"تعداد تغییر یافت");
-
+                                newNum.Clear();
                             }     
                         }
                     }
@@ -384,13 +363,15 @@ namespace project
             if (Hold.NumSignIn == 1)
             {
                 Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.95, CodeOff1));
-                daramad = sum * 0.05;
+                daramad = sum * 0.95;
+                sum *= 0.95;
                 hazine = kharj;
             }
             else if (Hold.NumSignIn == 2)
             {
                 Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.9, CodeOff2));
-                daramad = sum * 0.1;
+                daramad = sum * 0.9;
+                sum *= 0.9;
                 hazine = kharj;
             }
             else

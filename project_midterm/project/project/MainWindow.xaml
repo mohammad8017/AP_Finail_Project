@@ -21,28 +21,8 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <TextBlock HorizontalAlignment="Left" Height="65" Margin="272.8,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="192" Background="#FF637DC5" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Grid.Column="1"/>
                     <Button x:Name="btn1" Content="ورود" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171" Margin="9.8,202,0,0" Height="35" FontSize="16" FontWeight="Bold" Background="#FF637DC5" Click="Btn1_Click" Grid.Column="1"/>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="7,264,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="316" Background="#FF637DC5" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Grid.ColumnSpan="2"/>
                     <Button x:Name="btn4" Content="ثبت نام" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="272.8,202,0,0" Height="35" FontSize="16" FontWeight="Bold" Background="#FF637DC5" Click="Btn4_Click" Grid.Column="1"/>
-                    <CheckBox x:Name="chk1" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="7,319,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk2" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="7,358,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk3" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="7,397,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.ColumnSpan="2"/>
-                    <CheckBox x:Name="chk4" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="157.8,319,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <CheckBox x:Name="chk5" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="157.8,358,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <CheckBox x:Name="chk6" Content="CheckBox" HorizontalAlignment="Left" Height="19" Margin="157.8,397,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" Foreground="#FFCB3838" Grid.Column="1"/>
-                    <ComboBox x:Name="cmb1" HorizontalAlignment="Left" Height="19" Margin="293.8,319,0,0" VerticalAlignment="Top" Width="171" FontWeight="Bold" Foreground="#FFCB3838" Text="-- Select Team --" Grid.Column="1" >
-                        <ComboBoxItem Content="Tehran" />
-                        <ComboBoxItem Content="mash'had" />
-                        <ComboBoxItem Content="Esfehan" />
-                        <ComboBoxItem Content="Tabriz" />
-                    </ComboBox>
-                    <TextBlock HorizontalAlignment="Left" Height="27" Margin="7,444,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="316"  FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" FontSize="16" Background="#FF637DC5" Grid.ColumnSpan="2"/>
-                    <StackPanel HorizontalAlignment="Left" Height="94" Margin="7,491,0,0" VerticalAlignment="Top" Width="518" Background="#FF637DC5" Grid.ColumnSpan="2">
-                        <TextBox Margin="10,10,9.4,10" TextWrapping="Wrap" Foreground="Black" Height="76" RenderTransformOrigin="0.505,0.568" FontSize="16" FontWeight="Bold" Background="#FF637DC5" BorderBrush="#FF637DC5" AcceptsReturn="True">
-
-                        </TextBox>
-                    </StackPanel>
                     <Button x:Name="edit_button" Content="تغییر اطلاعات" HorizontalAlignment="Left" Height="42" Margin="319.8,590,0,0" VerticalAlignment="Top" Width="125" Background="#FF637DC5" FontWeight="Bold" FontSize="16" Click="Btn5_Click" BorderBrush="{x:Null}" Grid.Column="1"/>
                     <Button x:Name="btn11" Content="Date :" HorizontalAlignment="Left" Height="27" Margin="7,10,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn11_Click" ToolTip="Click to show date" Grid.ColumnSpan="2"/>
                     <Button x:Name="btn22" Content="Time :" HorizontalAlignment="Left" Height="27" Margin="7,48,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn22_Click" ToolTip="Click to show date" Grid.ColumnSpan="2"/>
@@ -99,7 +79,7 @@
 
                     </Calendar>
                     <Label Content="روز انتخاب شده:" HorizontalAlignment="Left" Height="31" Margin="10,76,0,0" VerticalAlignment="Top" Width="166" FontWeight="Bold" FontFamily="Tahoma" FontSize="14" Foreground="#FFCABFBF"/>
-                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="302" Margin="10,215,0,0" VerticalAlignment="Top" Width="518" SelectionUnit="FullRow" ToolTip="یک ستون را انتخاب کنید" SelectionChanged="DataGrid_SelectionChanged"/>
+                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="404" Margin="10,215,0,0" VerticalAlignment="Top" Width="518" SelectionUnit="FullRow" ToolTip="یک ستون را انتخاب کنید" SelectionChanged="DataGrid_SelectionChanged"/>
                     <TextBlock HorizontalAlignment="Left" Margin="148,76,0,0" TextWrapping="Wrap" Text="{Binding SelectedDate, ElementName=caledar}" VerticalAlignment="Top" Width="146" Height="31" Foreground="#FFEAE2E2" FontFamily="Tahoma" FontWeight="Bold" FontSize="14"/>
                     <Button x:Name="test" Content="کلیک کنید" HorizontalAlignment="Left" Height="19" Margin="10,191,0,0" VerticalAlignment="Top" Width="111" Click="Test_Click" FontWeight="Bold" ToolTip="برای نمایش غذا ها کلیک کنید"/>
                 </Grid>
@@ -109,8 +89,8 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <TextBox x:Name="txtAuto" HorizontalAlignment="Left" Height="33" Margin="160,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextChanged="txtAuto_TextChanged" FontSize="16" FontFamily="Tahoma" FontWeight="Bold" BorderBrush="#FFFF3737" Background="#FFDCCFCF"/>
-                    <ListBox x:Name="suggestion" Height="30" Margin="0,55,102.4,0" VerticalAlignment="Top" Width="276" SelectionChanged="suggestion_SelectionChanged" HorizontalAlignment="Right" BorderBrush="#FF030303" Background="#FFC76060" FontSize="14" FontFamily="Tahoma" />
+                    <TextBox x:Name="txtAuto" HorizontalAlignment="Left" Height="33" Margin="160,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" TextChanged="txtAuto_TextChanged" FontSize="16" FontFamily="Tahoma" FontWeight="Bold" BorderBrush="#FFDC9F9F" Background="#FFDCCFCF"/>
+                    <ListBox x:Name="suggestion" Height="30" Margin="0,55,102.4,0" VerticalAlignment="Top" Width="276" SelectionChanged="suggestion_SelectionChanged" HorizontalAlignment="Right" BorderBrush="#FF030303" Background="#FF717ED9" FontSize="14" FontFamily="Tahoma" />
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="21,24,0,0" TextWrapping="Wrap" Text="نام را وارد کنید" VerticalAlignment="Top" Width="134" FontWeight="Bold" FontFamily="Tahoma" FontSize="16" TextAlignment="Center"/>
                     <Button x:Name="saveSearch" Content="برای ثبت غذا کلیک کنید" HorizontalAlignment="Left" Height="37" Margin="38,111,0,0" VerticalAlignment="Top" Width="461" BorderBrush="#FFF9F4F4" FontSize="17" FontWeight="Bold" Click="saveSearch_Click">
                         <Button.Background>
@@ -154,12 +134,12 @@
                     <Label x:Name="holdDate" Content="" HorizontalAlignment="Left" Height="33" Margin="242.8,42,0,0" VerticalAlignment="Top" Width="193" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FF020202" FontWeight="Bold" FontSize="16" Background="#FFF4F4F4">
                     </Label>
                     <DataGrid x:Name="factor" HorizontalAlignment="Left" Height="341" Margin="72.8,75,0,0" VerticalAlignment="Top" Width="363" Grid.Column="1" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
-                    <Label x:Name="holdPrice" Content="جمع کل" HorizontalAlignment="Left" Height="33" Margin="72.8,383,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
+                    <Label x:Name="holdPrice" Content="جمع کل با تخفیف" HorizontalAlignment="Left" Height="33" Margin="72.8,383,0,0" VerticalAlignment="Top" Width="92" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
                         <Label.Background>
                             <ImageBrush/>
                         </Label.Background>
                     </Label>
-                    <Label x:Name="holdPrice_Copy" Content="" HorizontalAlignment="Left" Height="33" Margin="141.8,383,0,0" VerticalAlignment="Top" Width="294" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
+                    <Label x:Name="holdPrice_Copy" Content="" HorizontalAlignment="Left" Height="33" Margin="169.8,383,0,0" VerticalAlignment="Top" Width="266" BorderBrush="#FFF1EDED" Grid.Column="1" Foreground="#FFED2828" FontSize="16" FontWeight="Bold">
                         <Label.Background>
                             <ImageBrush/>
                         </Label.Background>
@@ -170,6 +150,7 @@
                     <Button x:Name="hozoori" Content="پرداخت حضوری" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="72.8,496,0,0" VerticalAlignment="Top" Width="170" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Hozoori_Click"/>
                     <Button x:Name="online" Content="پرداخت آنلاین" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="242.8,496,0,0" VerticalAlignment="Top" Width="193" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16" Click="Online_Click"/>
                     <Button x:Name="cancel_Copy" Content="لغو سفارش" HorizontalAlignment="Left" Height="41" Margin="242.8,456,0,0" VerticalAlignment="Top" Width="193" ToolTip="کلیک کنید" Click="Cancel_Click" Grid.Column="1" Background="#FFF4F4F4" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock x:Name="test1" Grid.Column="1" HorizontalAlignment="Left" Height="34" Margin="63.8,577,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab7" Header="نمایش فاکتورها">

@@ -245,21 +245,25 @@
             </TabItem>
             <TabItem x:Name="tab7" Header="خریدهای قبل" FontWeight="Bold" Margin="0.2,-2,4,0.4">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="526*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <Button x:Name="showFactor" Content="برای نمایش فاکتورهای قبل کلیک کنید" HorizontalAlignment="Left" Height="40" Margin="10,289,0,0" VerticalAlignment="Top" Width="258" FontFamily="Tahoma" FontWeight="Bold" Click="ShowFactor_Click" BorderBrush="#FF080808" Foreground="#FFF92B2B">
+                    <Button x:Name="showFactor" Content="برای نمایش فاکتورهای قبل کلیک کنید" HorizontalAlignment="Left" Height="40" Margin="10,289,0,0" VerticalAlignment="Top" Width="258" FontFamily="Tahoma" FontWeight="Bold" Click="ShowFactor_Click" BorderBrush="#FF080808" Foreground="#FFF92B2B" Grid.ColumnSpan="2">
                         <Button.Background>
                             <ImageBrush/>
                         </Button.Background>
                     </Button>
-                    <DataGrid x:Name="showCustomers" HorizontalAlignment="Left" Height="262" Margin="10,22,0,0" VerticalAlignment="Top" Width="518"/>
-                    <GroupBox Header="فاکتورهای قبل" Padding="10" Foreground="#FF85C236" Margin="10,334,10.4,9.6">
+                    <DataGrid x:Name="showCustomers" HorizontalAlignment="Left" Height="262" Margin="10,22,0,0" VerticalAlignment="Top" Width="518" Grid.ColumnSpan="2"/>
+                    <GroupBox Header="فاکتورهای قبل" Padding="10" Foreground="#FF85C236" Margin="10,334,10.4,9.4" Grid.ColumnSpan="2">
                         <StackPanel>
                             <DataGrid x:Name="ShowFactor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="265" Margin="0,0,-0.4,0" Width="486"/>
                         </StackPanel>
                     </GroupBox>
-                    <Button x:Name="deleteSefaresh" Content="برای حذف آخرین فاکتور کلیک کنید" HorizontalAlignment="Left" Height="40" Margin="273,289,0,0" VerticalAlignment="Top" Width="255" FontFamily="Tahoma" FontWeight="Bold" Click="DeleteFactor_Click" BorderBrush="#FF080808" Foreground="#FFF92B2B">
+                    <Button x:Name="deleteSefaresh" Content="برای حذف آخرین فاکتور کلیک کنید" HorizontalAlignment="Left" Height="40" Margin="260.4,289,0,0" VerticalAlignment="Top" Width="255" FontFamily="Tahoma" FontWeight="Bold" Click="DeleteFactor_Click" BorderBrush="#FF080808" Foreground="#FFF92B2B" Grid.Column="1">
                         <Button.Background>
                             <ImageBrush/>
                         </Button.Background>

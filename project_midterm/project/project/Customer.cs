@@ -13,6 +13,8 @@ namespace project
         public List<FactorList> factors = new List<FactorList>();
         public List<Food> sabad = new List<Food>();
         public bool laghveKharid = false;
+        public double HesabNum;
+        public string Emza;
         public string Name { set; get; }
         public string Family { set; get; }
         public double PhoneNum { set; get; }
