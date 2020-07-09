@@ -44,7 +44,13 @@ namespace project
         }
         public bool IsPhoneNumber(string number)
         {
-            return Regex.Match(number, @"^(\+[0-9]{10})$").Success;
+            if (Regex.Match(number, @"^(\+[0-9]{10})$").Success || number.StartsWith("09") || number.StartsWith("9") || number.StartsWith("+989") || number.StartsWith("00989"))
+            {
+                return true;
+            }
+            else
+                return false;
+            //return Regex.Match(number, @"^(\+[0-9]{10})$").Success;
         }
         public bool checkNationalId(string str)
         {
