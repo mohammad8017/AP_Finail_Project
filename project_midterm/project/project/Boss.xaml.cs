@@ -336,9 +336,7 @@ namespace project
             sood += daramad - hazine;
             MessageBox.Show($"{sood} سود شما از خرید های این مشتری");
 
-
-
-            
+               
             
         }
     }

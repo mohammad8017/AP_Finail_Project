@@ -38,6 +38,8 @@ namespace project
         public static double hazine;
         public bool pardakht = false;
         public int NumOfSaf;
+        public string CodeOff1 = "takhfif1";
+        public string CodeOff2 = "takhfif2";
         public MainWindow()
         {
             InitializeComponent();
@@ -84,6 +86,7 @@ namespace project
                     //holdName.Content = Hold.Name + " " + Hold.Family;
                     NumOfSaf = i;
                     Hold = Signup_window.customer[i];
+                    Signup_window.customer[i].NumSignIn++;
                 }  
             }
             if (check)
@@ -374,10 +377,24 @@ namespace project
                 holdname.Add(sabadKharid[i].Name);
                 holdprice.Add(sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24));
             }
-
-            Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum, "code takhfif"));//code takhfif va gheymate ba takhfif hesab nashode
-            daramad = sum;
-            hazine = kharj;
+            if (Hold.NumSignIn == 1)
+            {
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.05, CodeOff1));
+                daramad = sum * 0.05;
+                hazine = kharj;
+            }
+            else if (Hold.NumSignIn == 2)
+            {
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.1, CodeOff2));
+                daramad = sum * 0.1;
+                hazine = kharj;
+            }
+            else
+            {
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum, "کدتخفیف ندارد"));
+                daramad = sum;
+                hazine = kharj;
+            }
             factor.ItemsSource = holdd;
             holdPrice_Copy.Content = sum.ToString();
             holdHesab.Content = HesabNum;
