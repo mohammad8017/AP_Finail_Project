@@ -67,6 +67,10 @@ namespace project
                 MessageBox.Show("شما وارد حساب خود شدید");
             else
                 MessageBox.Show("کلمه عبور یا ایمیل نادرست است");
+            if (Signup_window.customer != null)
+            {
+                showCustomers.ItemsSource = Signup_window.customer;
+            }
         }
 
         private void upload_image_Click(object sender, RoutedEventArgs e)
@@ -250,6 +254,92 @@ namespace project
             foodDateEdit.Clear();
             foodComboEdit.SelectedIndex = -1;
             MessageBox.Show("اطلاعات تغییر یافت");
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ShowFactor_Click(object sender, RoutedEventArgs e)
+        {
+            var tmp = showCustomers.SelectedCells;
+            string holdName = "";
+            List<string>[] holdFoods = new List<string>[10];
+            double daramad = 0;
+            double hazine = 0;
+            double sood = 0;
+            try
+            {
+                holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+            }
+            catch
+            {
+                MessageBox.Show("مشتری انتخاب نشده");
+            }
+            //foreach(var item in Signup_window.customer)
+            //{
+            //    if (item.Name.Equals(holdName))
+            //    {
+            //        if (item.factors != null)
+            //        {
+            //            ShowFactor.ItemsSource = item.factors;
+            //            for(int i = 0; i < item.factors.Count; i++)
+            //            {
+            //                holdFoods[i] = item.factors[0].Names;
+            //                daramad += item.factors[i].AllPriceOff;
+            //            }
+            //        }    
+            //        else
+            //            MessageBox.Show("مشتری انتخاب شده هنوز خریدی انجام نداده است");
+            //    }    
+            //}
+            List<ShowFactor> show = new List<ShowFactor>();
+            foreach (var item in Signup_window.customer)
+            {
+                if (item.Name.Equals(holdName))
+                {
+                    for (int i = 0; i < item.factors.Count; i++)
+                    {
+                        holdFoods[i] = item.factors[i].Names;
+                        string tmp2 = "foods: ";
+                        for (int j = 0; j < item.factors[i].Names.Count; j++)
+                        {
+                            if (j != item.factors[i].Names.Count - 1)
+                                tmp2 += item.factors[i].Names[j] + ", " + item.factors[i].Prices[j] + " | ";
+                            else
+                                tmp2 += item.factors[i].Names[j] + ", " + item.factors[i].Prices[j];
+                        }
+                        //tmp += "// price of all with out OFF: " + Hold.factors[i].AllPrice + "// price of all with OFF: " + Hold.factors[i].AllPriceOff;
+                        //show.Add(Hold.factors[i].Names[j]);
+                        show.Add(new ShowFactor(tmp2, item.factors[i].AllPrice, item.factors[i].AllPriceOff));
+                    }
+                    if (item.factors.Count > 0)
+                        ShowFactor.ItemsSource = show;
+                    else
+                        MessageBox.Show("مشتری انتخاب شده هنوز خریدی انجام نداده است");
+                }
+
+            }
+
+            foreach (var item in holdFoods)
+            {
+                if (item != null)
+                {
+                    for (int i = 0; i < foodList.Count; i++)
+                    {
+                        if (item.Equals(foodTemp[i].Name))
+                            hazine += foodTemp[i].RealPrice;
+                    } 
+                }
+            }
+            sood += daramad - hazine;
+            MessageBox.Show($"{sood} سود شما از خرید های این مشتری");
+
+
+
+            
+            
         }
     }
 }

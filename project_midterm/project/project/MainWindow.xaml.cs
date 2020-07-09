@@ -567,10 +567,10 @@ namespace project
         private void showFactor_Click(object sender, RoutedEventArgs e)
         {
             List<ShowFactor> show = new List<ShowFactor>();
-            for(int i = 0; i < Hold.factors.Count; i++)
+            for (int i = 0; i < Hold.factors.Count; i++)
             {
                 string tmp = "foods: ";
-                for(int j = 0; j < Hold.factors[i].Names.Count; j++)
+                for (int j = 0; j < Hold.factors[i].Names.Count; j++)
                 {
                     if (j != Hold.factors[i].Names.Count - 1)
                         tmp += Hold.factors[i].Names[j] + ", " + Hold.factors[i].Prices[j] + " | ";
