@@ -87,6 +87,10 @@ namespace project
                     NumOfSaf = i;
                     Hold = Signup_window.customer[i];
                     Signup_window.customer[i].NumSignIn++;
+                    if (Hold.laghveKharid)
+                    {
+                        MessageBox.Show("سفارش شما توسط ادمین لغو شده و مبلغ فاکتور به حساب شما تا 24 ساعت آینده برمیگردد");
+                    }
                 }  
             }
             if (check)
@@ -379,13 +383,13 @@ namespace project
             }
             if (Hold.NumSignIn == 1)
             {
-                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.05, CodeOff1));
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.95, CodeOff1));
                 daramad = sum * 0.05;
                 hazine = kharj;
             }
             else if (Hold.NumSignIn == 2)
             {
-                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.1, CodeOff2));
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.9, CodeOff2));
                 daramad = sum * 0.1;
                 hazine = kharj;
             }
@@ -437,7 +441,7 @@ namespace project
             pardakht = true;
             MessageBox.Show(" از حساب شما مبلغ"+ daramad +" تومان کسر شد" + "\n");
             MessageBox.Show("ممنون از خرید شما");
-            
+            Signup_window.customer[NumOfSaf].sabad = sabadKharid;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

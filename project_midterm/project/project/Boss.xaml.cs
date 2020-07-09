@@ -339,5 +339,28 @@ namespace project
                
             
         }
+
+        private void DeleteFactor_Click(object sender, RoutedEventArgs e)
+        {
+            var tmp = showCustomers.SelectedCells;
+            string holdName = "";
+            try
+            {
+                holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
+            }
+            catch
+            {
+                MessageBox.Show("مشتری انتخاب نشده");
+            }
+            for(int i = 0; i < Signup_window.customer.Count; i++)
+            {
+                if (holdName.Equals(Signup_window.customer[i].Name))
+                {
+                    Signup_window.customer[i].sabad.Clear();
+                    Signup_window.customer[i].laghveKharid = true;
+                }
+            }
+            MessageBox.Show("سفارش مشتری حذف شد");
+        }
     }
 }
