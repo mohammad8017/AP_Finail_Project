@@ -40,6 +40,7 @@ namespace project
         public int NumOfSaf;
         public string CodeOff1 = "takhfif1";
         public string CodeOff2 = "takhfif2";
+        public int factorNum;
         public MainWindow()
         {
             InitializeComponent();
@@ -354,31 +355,53 @@ namespace project
             double kharj = 0;
             for (int i = 0; i < sabadKharid.Count; i++)
             {
-                holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24), sabadKharid[i].Mojoodi));
-                sum += sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24);
+                holdd.Add(new FoodFactor(sabadKharid[i].Name, sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.09), sabadKharid[i].Mojoodi));
+                sum += sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.09);
                 kharj += sabadKharid[i].Mojoodi * sabadKharid[i].RealPrice;
                 holdname.Add(sabadKharid[i].Name);
-                holdprice.Add(sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.24));
+                holdprice.Add(sabadKharid[i].Mojoodi * (sabadKharid[i].FinishPrice * 1.09));
             }
-            if (Hold.NumSignIn == 1)
+            if (Hold.factors.Count == 0)
             {
                 Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.95, CodeOff1));
                 daramad = sum * 0.95;
                 sum *= 0.95;
                 hazine = kharj;
             }
-            else if (Hold.NumSignIn == 2)
+            else if (Hold.factors.Count == 1)
             {
                 Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum * 0.9, CodeOff2));
                 daramad = sum * 0.9;
                 sum *= 0.9;
                 hazine = kharj;
             }
-            else
+            else if(Hold.factors.Count > 1 && Hold.factors.Count < 5)
             {
-                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum, "کدتخفیف ندارد"));
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, sum, "تخفیف خرید بین دو و پنج خرید"));
                 daramad = sum;
                 hazine = kharj;
+            }
+            else if(Hold.factors.Count > 4 && Hold.factors.Count < 9)
+            {
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, (sum * 0.91) * 1.02, "تخفیف خرید بین  پنج و نه خرید"));
+                daramad = (sum * 0.91) * 1.02;
+                sum *= 0.91 * 1.02;
+                hazine = kharj;
+            }
+            else if (Hold.factors.Count > 7 && Hold.factors.Count < 13)
+            {
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, (sum * 0.91) * 0.95, "تخفیف خرید بین هشل و سیزده خرید"));
+                daramad = (sum * 0.91) * 0.95;
+                sum *= 0.91 * 0.95;
+                hazine = kharj;
+            }
+            else
+            {
+                Signup_window.customer[NumOfSaf].factors.Add(new FactorList(holdname, holdprice, sum, (sum * 0.91) * 0.9, "تخفیف خرید بیش از دوازده خرید"));
+                daramad = (sum * 0.91) * 0.9;
+                sum *= 0.91 * 0.9;
+                hazine = kharj;
+                Signup_window.customer[NumOfSaf].ghoreKeshi = true;
             }
             factor.ItemsSource = holdd;
             holdPrice_Copy.Content = sum.ToString();
@@ -419,6 +442,22 @@ namespace project
 
         private void Online_Click(object sender, RoutedEventArgs e)
         {
+            if (Hold.ghoreKeshi)
+            {
+                factorNum= (new Random()).Next(100, 1000);
+                int ghore_keshi = (new Random()).Next(1, 10);
+                if (factorNum % 10 == ghore_keshi)
+                {
+                    MessageBox.Show($"{factorNum}:شماره فاکتور شما");
+                    MessageBox.Show("شما در قرعه کشی برنده شدید و یک پیش غذا رایگان برای شما ارسال میشود");
+                }
+                else
+                {
+                    MessageBox.Show($"{factorNum}:شماره فاکتور شما");
+                    MessageBox.Show("شما در قرعه کشی برنده نشدید");
+                }
+                    
+            }
             pardakht = true;
             MessageBox.Show(" از حساب شما مبلغ"+ daramad +" تومان کسر شد" + "\n");
             MessageBox.Show("ممنون از خرید شما");
