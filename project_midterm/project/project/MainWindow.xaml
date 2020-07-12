@@ -175,7 +175,7 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="3.jpg"/>
                     </Grid.Background>
-                    <TextBlock HorizontalAlignment="Left" Height="32" Margin="19,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFEBD8D8"><Run Text="ایمیل فرستنده"/><Run FlowDirection="RightToLeft" Text=":"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Height="32" Margin="19,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFEBD8D8"><Run Text="ایمیل گیرنده"/><Run FlowDirection="RightToLeft" Text=":"/></TextBlock>
                     <TextBox x:Name="sentEmail" HorizontalAlignment="Left" Height="32" Margin="112,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="416" BorderBrush="#FFFBFBFC" Foreground="#FFFF2121" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2">
                         <TextBox.Background>
                             <ImageBrush/>
