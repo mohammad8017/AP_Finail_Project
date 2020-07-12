@@ -166,6 +166,46 @@
                     <DataGrid x:Name="showFactorGrid" HorizontalAlignment="Left" Height="514" Margin="32,101,0,0" VerticalAlignment="Top" Width="477"/>
                 </Grid>
             </TabItem>
+            <TabItem x:Name="tab8" Header="ارسال پیام ">
+                <Grid x:Name="txt323" RenderTransformOrigin="0.546,0.459">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="235*"/>
+                        <ColumnDefinition Width="34*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <TextBlock HorizontalAlignment="Left" Height="32" Margin="19,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFEBD8D8"><Run Text="ایمیل فرستنده"/><Run FlowDirection="RightToLeft" Text=":"/></TextBlock>
+                    <TextBox x:Name="sentEmail" HorizontalAlignment="Left" Height="32" Margin="112,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="416" BorderBrush="#FFFBFBFC" Foreground="#FFFF2121" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2">
+                        <TextBox.Background>
+                            <ImageBrush/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock HorizontalAlignment="Left" Height="32" Margin="19,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFEBD8D8"><Run Text="متن پیام"/><Run FlowDirection="RightToLeft" Text=":"/></TextBlock>
+                    <TextBox x:Name="message" HorizontalAlignment="Left" Height="137" Margin="112,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="416" BorderBrush="#FFFBFBFC" Foreground="#FFFF2121" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2">
+                        <TextBox.Background>
+                            <ImageBrush/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Button x:Name="sendMessages" Content="ارسال" HorizontalAlignment="Left" Height="37" Margin="10,202,0,0" VerticalAlignment="Top" Width="518" FontSize="16" FontWeight="Bold" Click="Send_Click" Grid.ColumnSpan="2"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab9" Header="صندوق پیام">
+                <Grid x:Name="txt353" RenderTransformOrigin="0.546,0.459">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="3.jpg"/>
+                    </Grid.Background>
+                    <TextBlock HorizontalAlignment="Left" Height="32" Margin="19,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFEBD8D8"><Run Text="متن پیام"/><Run FlowDirection="RightToLeft" Text=":"/></TextBlock>
+                    <TextBox x:Name="messages" HorizontalAlignment="Left" Height="569" Margin="112,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="416" BorderBrush="#FFFBFBFC" Foreground="#FFFF2121" FontSize="14" FontWeight="Bold">
+                        <TextBox.Background>
+                            <ImageBrush/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Button x:Name="showMessage" Content="نمایش پیام ها" HorizontalAlignment="Left" Height="39" Margin="10,10,0,0" VerticalAlignment="Top" Width="518" FontSize="16" FontWeight="Bold" Click="showMessage_Click"/>
+
+                </Grid>
+            </TabItem>
         </TabControl>
 
     </Grid>

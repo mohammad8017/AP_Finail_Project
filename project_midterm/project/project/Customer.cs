@@ -12,6 +12,7 @@ namespace project
         public List<Customer> customer = new List<Customer>();
         public List<FactorList> factors = new List<FactorList>();
         public List<Food> sabad = new List<Food>();
+        public List<string> Messages = new List<string>();
         public bool laghveKharid = false;
         public bool ghoreKeshi = false;
         public double HesabNum;

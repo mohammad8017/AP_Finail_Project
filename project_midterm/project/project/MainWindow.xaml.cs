@@ -641,5 +641,48 @@ namespace project
             else
                 MessageBox.Show("شما تا کنون خریدی نداشتید");
         }
+
+        private void Send_Click(object sender, RoutedEventArgs e)
+        {
+            bool isValid = false;
+            for(int i = 0; i < Signup_window.customer.Count; i++)
+            {
+                if (Signup_window.customer[i].Email.Equals(sentEmail.Text))
+                {
+                    isValid = true;
+                    string tmp = $"{Hold.Email}:";
+                    tmp += message.Text;
+                    Signup_window.customer[i].Messages.Add(tmp);
+                }
+            }
+            if (isValid)
+            {
+                MessageBox.Show("ارسال شد");
+                sentEmail.Clear();
+                message.Clear();
+            }
+            else
+                MessageBox.Show("کاربری با این ایمیل وجود ندارد");
+        }
+
+        private void showMessage_Click(object sender, RoutedEventArgs e)
+        {
+            string tmp = "";
+            for(int i = 0; i < Hold.Messages.Count; i++)
+            {
+                if (Hold.Messages.Count == 0)
+                    MessageBox.Show("صندوق پیام خالی است");
+                else
+                {
+                    var temp = Hold.Messages[i].Split(':');
+                    tmp += temp[0] + "\n";
+                    for (int j = 1; j < temp.Length; j++)
+                        if (j != temp.Length - 1)
+                            tmp += temp[j] + ":";
+                    tmp += "\n" + "........................................................";
+                }
+            }
+            messages.Text = tmp;
+        }
     }
 }
