@@ -23,8 +23,8 @@ namespace project
     {
         public boss Hold = new boss();
         public bool signIn = false;
-        public List<Food> foodList = new List<Food>();
-        public static List<Food> foodTemp = new List<Food>();
+        public static List<Food> foodList = new List<Food>();
+        //public static List<Food> foodTemp = new List<Food>();
         public static List<boss> listOfBoss = new List<boss>();
         public static ImageSource menuImage;
         public static List<ImageSource> foodImage = new List<ImageSource>();
@@ -138,9 +138,9 @@ namespace project
             var mtp = foodDate.Text.Split('/'); //System.Windows.Controls.ComboBoxItem:
             var tmpType = foodCombo.SelectedItem.ToString();
             var foodType= tmpType.Split(new string[] { "System.Windows.Controls.ComboBoxItem:" }, StringSplitOptions.None);
-            //foodList.Add(new Food("pizza", 12000, 3000, "morgh", 23, 7, 1, 2020));
+            //foodList.Add(new Food("pizza", 12000, 3000, "morgh", "sade", "پیتزا", 23, 7, 13, 2020));
             foodList.Add(new Food(foodname.Text, int.Parse(foodPrice.Text), int.Parse(FoodPrice.Text), foodInfo.Text, privateInfo.Text, foodType[1], int.Parse(foodNum.Text), int.Parse(mtp[0]), int.Parse(mtp[1]), int.Parse(mtp[2])));
-            foodTemp = foodList;
+            //foodTemp = foodList;
             foodname.Clear();
             foodPrice.Clear();
             FoodPrice.Clear();
@@ -314,6 +314,7 @@ namespace project
                         //tmp += "// price of all with out OFF: " + Hold.factors[i].AllPrice + "// price of all with OFF: " + Hold.factors[i].AllPriceOff;
                         //show.Add(Hold.factors[i].Names[j]);
                         show.Add(new ShowFactor(tmp2, item.factors[i].AllPrice, item.factors[i].AllPriceOff));
+                        daramad += item.factors[i].AllPriceOff;
                     }
                     if (item.factors.Count > 0)
                         ShowFactor.ItemsSource = show;
@@ -329,11 +330,12 @@ namespace project
                 {
                     for (int i = 0; i < foodList.Count; i++)
                     {
-                        if (item.Equals(foodTemp[i].Name))
-                            hazine += foodTemp[i].RealPrice;
+                        if (item.Equals(foodList[i].Name))
+                            hazine += foodList[i].RealPrice;
                     } 
                 }
             }
+            
             sood += daramad - hazine;
             MessageBox.Show($"{sood} سود شما از خرید های این مشتری");
 

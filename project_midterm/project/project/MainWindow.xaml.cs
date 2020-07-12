@@ -29,7 +29,7 @@ namespace project
         //public List<Customer> Customers = new List<Customer>();
         public List<Food> sabadKharid = new List<Food>();
         public List<Food> source = new List<Food>();
-        public List<Food> allFood = Modir.foodTemp;
+        public List<Food> allFood = Modir.foodList;
         //public List<Food> allFood2 = Modir.foodTemp;
         public List<ImageSource> foodPhoto = Modir.foodImage;
         public static string Emza;
@@ -219,11 +219,6 @@ namespace project
             change.change(ref Hold);
         }
 
-        private void EmailTex_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void upload_image_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
@@ -260,13 +255,15 @@ namespace project
                 {
                     if (source[i].Mojoodi == 0)
                     {
-                        MessageBox.Show("متاسفم غذاهای امروز به پایان رسیده است لطفا روزدیگری را امتحان کنید");
+                        MessageBox.Show("متاسفم این غذا امروز به پایان رسیده است لطفا غذا دیگری را امتحان کنید");
 
                     }
                     else
                     {
-                        sabadKharid.Add(source[i]);
-                        sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
+                        sabadKharid.Add(new Food(source[i].Name, source[i].FinishPrice, source[i].RealPrice, source[i].Info, source[i].PrivateInfo, source[i].Type, 1, source[i].date.Month, source[i].date.Day, source[i].date.Year));
+                        //sabadKharid.Add(source[i]);
+                        source[i].Mojoodi--;
+                        //sabadKharid[sabadKharid.Count - 1].Mojoodi = 1;
                         MessageBox.Show($"به سبد خرید شما اضافه شد{holdName}");
                     }
                 }
@@ -280,7 +277,7 @@ namespace project
             if (newNum.Text != null)
             {
                 var tmp = dataSabad.SelectedCells;
-                string holdName = "s";
+                string holdName = "";
                 try
                 {
                     holdName = (tmp[0].Column.GetCellContent(tmp[0].Item) as TextBlock).Text;
@@ -299,12 +296,29 @@ namespace project
                         {
                             if (allFood[j].Name.Equals(holdName))
                             {
-                                allFood[j].Mojoodi -= int.Parse(newNum.Text);
-                                sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+                                allFood[j].Mojoodi++;
+                                if (int.Parse(newNum.Text) > allFood[j].Mojoodi)
+                                {
+                                    MessageBox.Show("مقدار انتخابی بیشتر از حد مجاز است");
+                                }
+                                else
+                                {
+                                    allFood[j].Mojoodi -= int.Parse(newNum.Text);
+                                    sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+                                    dataSabad.ItemsSource = sabadKharid;
+                                    MessageBox.Show($"تعداد تغییر یافت");
+                                    newNum.Clear();
+                                }
 
-                                dataSabad.ItemsSource = sabadKharid;
-                                MessageBox.Show($"تعداد تغییر یافت");
-                                newNum.Clear();
+
+
+
+                                //allFood[j].Mojoodi -= int.Parse(newNum.Text);
+                                //sabadKharid[i].Mojoodi = int.Parse(newNum.Text);
+
+                                //dataSabad.ItemsSource = sabadKharid;
+                                //MessageBox.Show($"تعداد تغییر یافت");
+                                //newNum.Clear();
                             }     
                         }
                     }
