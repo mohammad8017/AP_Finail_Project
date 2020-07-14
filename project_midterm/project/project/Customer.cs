@@ -15,7 +15,7 @@ namespace project
         public List<string> Messages = new List<string>();
         public bool laghveKharid = false;
         public bool ghoreKeshi = false;
-        public double HesabNum;
+        public string HesabNum;
         public string Emza;
         public string Name { set; get; }
         public string Family { set; get; }

@@ -21,17 +21,24 @@ namespace project
     {
         public string Emzaa;
         public string HesabNum;
+        public static Customer Hold;
         public emza()
         {
             InitializeComponent();
         }
-
+        public emza(Customer tmp)
+        {
+            InitializeComponent();
+            Hold = tmp;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Emzaa = emzaa_text.Text;
-            HesabNum = hesab_text.Text;
-            MainWindow.HesabNum = this.HesabNum;
-            MainWindow.Emza = Emzaa;
+            //Emzaa = emzaa_text.Text;
+            //HesabNum = hesab_text.Text;
+            //MainWindow.HesabNum = this.HesabNum;
+            //MainWindow.Emza = Emzaa;
+            Hold.Emza = emzaa_text.Text;
+            Hold.HesabNum = hesab_text.Text;
             this.Close();
             
         }

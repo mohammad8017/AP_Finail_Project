@@ -58,7 +58,7 @@ namespace project
             //source.Add(new Food("pizza", 12000, 3000, "morgh", 23, 6, 30, 2020));
             //dataGrid.ItemsSource = source;
 
-
+            
             //dataGrid.ItemsSource = nnn.bosses;
 
             //Signup_window window = new Signup_window();
@@ -355,8 +355,9 @@ namespace project
 
         private void Finish_Click(object sender, RoutedEventArgs e)
         {
-            emza tmp = new emza();
+            emza tmp = new emza(Hold);
             tmp.Show();
+
 
             //HesabNum = tmp.hesab_text.Text;
             //Emza = tmp.emzaa_text.Text;
@@ -419,10 +420,9 @@ namespace project
             }
             factor.ItemsSource = holdd;
             holdPrice_Copy.Content = sum.ToString();
-            holdHesab.Content = HesabNum;
-            hold_emza.Content = Emza;
             
-            tabControl.SelectedItem = tab5;
+            
+            //tabControl.SelectedItem = tab5;
         }
 
         private void Test_Click_1(object sender, RoutedEventArgs e)
@@ -683,6 +683,13 @@ namespace project
                 }
             }
             messages.Text = tmp;
+        }
+
+        private void changeTab_Click(object sender, RoutedEventArgs e)
+        {
+            holdHesab.Content = emza.Hold.HesabNum;
+            hold_emza.Content = emza.Hold.Emza;
+            tabControl.SelectedItem = tab5;
         }
     }
 }
