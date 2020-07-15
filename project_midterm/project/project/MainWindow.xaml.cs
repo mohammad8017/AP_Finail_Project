@@ -451,6 +451,22 @@ namespace project
 
         private void Hozoori_Click(object sender, RoutedEventArgs e)
         {
+            if (Hold.ghoreKeshi)
+            {
+                factorNum = (int)daramad % 10;
+                int ghore_keshi = (new Random()).Next(1, 10);
+                if (factorNum % 10 == ghore_keshi)
+                {
+                    //MessageBox.Show($"{factorNum}:شماره فاکتور شما");
+                    MessageBox.Show("شما در قرعه کشی برنده شدید و یک پیش غذا رایگان برای شما ارسال میشود");
+                }
+                else
+                {
+                    //MessageBox.Show($"{factorNum}:شماره فاکتور شما");
+                    MessageBox.Show("شما در قرعه کشی برنده نشدید");
+                }
+
+            }
             MessageBox.Show("ممنون از خرید شما");
         }
 
@@ -458,16 +474,16 @@ namespace project
         {
             if (Hold.ghoreKeshi)
             {
-                factorNum= (new Random()).Next(100, 1000);
+                factorNum = (int)daramad % 10;
                 int ghore_keshi = (new Random()).Next(1, 10);
                 if (factorNum % 10 == ghore_keshi)
                 {
-                    MessageBox.Show($"{factorNum}:شماره فاکتور شما");
+                    //MessageBox.Show($"{factorNum}:شماره فاکتور شما");
                     MessageBox.Show("شما در قرعه کشی برنده شدید و یک پیش غذا رایگان برای شما ارسال میشود");
                 }
                 else
                 {
-                    MessageBox.Show($"{factorNum}:شماره فاکتور شما");
+                    //MessageBox.Show($"{factorNum}:شماره فاکتور شما");
                     MessageBox.Show("شما در قرعه کشی برنده نشدید");
                 }
                     
