@@ -1,0 +1,5 @@
+name,family,code,pass,address,region,type
+ali,ahmadi,1234,M1234,Tehran,2,hozoori-online
+mohammad,amiri,1235,M1235,Tehran,2,hozoori-online
+amir,delavar,1236,M1236,Tehran,2,hozoori-online
+reza,saboori,1237,M1237,Tehran,2,hozoori-online

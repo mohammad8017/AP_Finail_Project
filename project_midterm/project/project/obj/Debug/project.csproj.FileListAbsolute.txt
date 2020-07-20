@@ -1,0 +1,84 @@
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.exe.config
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.exe
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.pdb
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csprojAssemblyReference.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\MainWindow.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\App.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_MarkupCompile.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_MarkupCompile.lref
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\MainWindow.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.g.resources
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.Properties.Resources.resources
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.GenerateResource.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.exe
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.pdb
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeName.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeName.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeFamily.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeFamily.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Boss.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeRegion.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeType.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\Boss.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeRegion.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeType.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeUsername.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeUsername.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\emza.g.cs
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\emza.baml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\AdminData.mdf
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\bin\Debug\AdminData_log.ldf
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_Content.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\bin\Debug\AdminData.mdf
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\bin\Debug\AdminData_log.ldf
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.exe.config
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.exe
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\bin\Debug\project.pdb
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\Boss.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeFamily.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeName.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeRegion.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeType.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeUsername.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\emza.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\MainWindow.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\App.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_Content.g.cs
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_MarkupCompile.cache
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project_MarkupCompile.lref
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\Boss.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeEmail.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeFamily.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changeName.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePass.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\changePhone.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeRegion.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeType.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\ChangeUsername.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\emza.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\MainWindow.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\Signup_window.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\statUp.baml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.g.resources
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.exe
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\project\obj\Debug\project.pdb

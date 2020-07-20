@@ -1,0 +1,38 @@
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\AdminData.mdf
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\AdminData_log.ldf
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\projectTests.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\projectTests.pdb
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\project.exe
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\project.pdb
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\project.exe.config
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.csprojAssemblyReference.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.csproj.CoreCompileInputs.cache
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.csproj.CopyComplete
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.dll
+F:\AP\final_project\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.pdb
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\AdminData.mdf
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\AdminData_log.ldf
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\projectTests.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\projectTests.pdb
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\project.exe
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\project.pdb
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\project.exe.config
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.dll
+C:\Users\Lenovo\Desktop\New folder (2)\AP_Finail_Project\project_midterm\project\projectTests\obj\Debug\projectTests.pdb
