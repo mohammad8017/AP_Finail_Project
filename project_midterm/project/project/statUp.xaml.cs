@@ -39,7 +39,9 @@ namespace project
 
                 //}
                 //readInfo.Close();
-                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\AdminData.mdf;Integrated Security=True";
+                //string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\AP\final_project\AP_Finail_Project\project_midterm\project\project\AdminData.mdf;Integrated Security=True";
+                //C:\USERS\LENOVO\DESKTOP\NEW FOLDER (2)\AP_FINAIL_PROJECT\PROJECT_MIDTERM\PROJECT\PROJECT\ADMINDATA.MDF
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\LENOVO\DESKTOP\NEW FOLDER (2)\AP_FINAIL_PROJECT\PROJECT_MIDTERM\PROJECT\PROJECT\ADMINDATA.MDF;Integrated Security=True";
                 SqlConnection Connection = new SqlConnection(connectionString);
                 Connection.Open();
                 SqlCommand Command = new SqlCommand("SELECT * FROM [Table]", Connection);
